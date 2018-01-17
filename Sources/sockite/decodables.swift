@@ -20,4 +20,5 @@ struct CheckuserJSON: Decodable {
         var link: String
         var title: String
     }
+    var items: [Item]
 }
