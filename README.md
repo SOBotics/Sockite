@@ -1,3 +1,3 @@
-# sockite
+# Sockite
 
-A description of this package.
+Sockite is a bot developed to try to catch sock puppets.
