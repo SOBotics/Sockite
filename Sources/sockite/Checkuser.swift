@@ -36,7 +36,7 @@ class Checkuser: Command {
                             }
                             room.postMessage(resToChat)
                         } catch let jsonError {
-                            print("JSON error occured: `\(jsonError.localizedDescription)` cc @paper")
+                            room.postMessage("JSON error occured: `\(jsonError.localizedDescription)` cc @paper")
                         }
                     } else {
                         room.postMessage("Unknown error at `Checkuser.swift#L41` cc @paper")
