@@ -7,8 +7,9 @@ let package = Package(
     name: "sockite",
     dependencies: [
         .package(url: "git://github.com/SOBotics/SwiftChatSE", from: "5.0.0"),
+        .package(url: "https://github.com/SOBotics/SwiftRedunda.git", from: "0.1.0")
     ],
     targets: [
-        .target(name: "sockite", dependencies: ["SwiftChatSE"]),
+        .target(name: "sockite", dependencies: ["SwiftChatSE", "SwiftRedunda"]),
     ]
 )

@@ -1,9 +1,11 @@
 import SwiftChatSE
+import SwiftRedunda
 
 let commandService = CommandService()
+let pingService = RedundaPingService(key: "", version: "0.1.0")
 
-let email = "hilarylau12342@gmail.com"
-let password = "p4e3a2d1b"
+let email = ""
+let password = ""
 
 let client = Client()
 try! client.login(email: email, password: password)
@@ -12,10 +14,12 @@ let room = ChatRoom(client: client, host: .stackOverflow, roomID: 111347)
 try! room.join()
 
 room.postMessage("[ 玄 | Sockite ] started in test mode (running on paper1111/iMac)")
+pingService.startPinging()
 
 room.onMessage { msg, edit in
-    print(msg.content)
-    commandService.recieveMsg(msg, edit)
+    if !pingService.shouldStandby() {
+        commandService.recieveMsg(msg, edit)
+    }
 }
 
 while true {

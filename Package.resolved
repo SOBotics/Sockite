@@ -45,6 +45,15 @@
           "revision": "f7187b04786b1c7a6ec09ae02c4027935f3805a1",
           "version": "5.0.4"
         }
+      },
+      {
+        "package": "swiftredunda",
+        "repositoryURL": "https://github.com/SOBotics/SwiftRedunda.git",
+        "state": {
+          "branch": null,
+          "revision": "d9469189e8310c8bac74dd7c5360c4c272d15fca",
+          "version": "0.1.0"
+        }
       }
     ]
   },
