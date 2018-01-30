@@ -28,6 +28,34 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Yams::Yams"
+               BuildableName = "Yams.framework"
+               BlueprintName = "Yams"
+               ReferencedContainer = "container:sockite.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Yams::CYaml"
+               BuildableName = "CYaml.framework"
+               BlueprintName = "CYaml"
+               ReferencedContainer = "container:sockite.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "swiftredunda::SwiftRedunda"
                BuildableName = "SwiftRedunda.framework"
                BlueprintName = "SwiftRedunda"

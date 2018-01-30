@@ -6,10 +6,12 @@ import PackageDescription
 let package = Package(
     name: "sockite",
     dependencies: [
-        .package(url: "git://github.com/SOBotics/SwiftChatSE", from: "5.0.0"),
-        .package(url: "https://github.com/SOBotics/SwiftRedunda.git", from: "0.1.0")
+        .package(url: "https://github.com/SOBotics/SwiftChatSE.git", from: "5.0.0"),
+        .package(url: "https://github.com/SOBotics/SwiftRedunda.git", from: "0.1.0"),
+        .package(url: "https://github.com/jpsim/Yams.git", from: "0.5.0"),
+        .package(url: "https://github.com/SwiftyBeaver/SwiftyBeaver.git", from: "1.5.0")
     ],
     targets: [
-        .target(name: "sockite", dependencies: ["SwiftChatSE", "SwiftRedunda"]),
+        .target(name: "sockite", dependencies: ["SwiftChatSE", "SwiftRedunda", "Yams", "SwiftyBeaver"]),
     ]
 )

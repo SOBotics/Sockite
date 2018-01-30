@@ -4,9 +4,9 @@ class Command {
     
     var syntax: [String]
     var args: Int
-    var handler: (ChatMessage, [String]) -> ()
+    var handler: (ChatMessage, [String], ChatRoom) -> ()
     
-    init(syntax: [String], args: Int, exec: @escaping (ChatMessage, [String]) -> ()) {
+    init(syntax: [String], args: Int, exec: @escaping (ChatMessage, [String], ChatRoom) -> ()) {
         self.syntax = syntax
         self.args = args
         self.handler = exec
@@ -14,7 +14,7 @@ class Command {
 }
 
 class CommandService {
-    func recieveMsg(_ msg: ChatMessage, _ isEdit: Bool) {
+    func recieveMsg(_ msg: ChatMessage, _ isEdit: Bool, _ room: ChatRoom) {
         var msgContent: String = msg.content
         if !msgContent.lowercased().starts(with: "@myst") {
             return
@@ -30,7 +30,7 @@ class CommandService {
                 for syntax in command.syntax {
                     if syntax == msgParts[0] {
                         print("cmd works")
-                        command.handler(msg, msgParts)
+                        command.handler(msg, msgParts, room)
                     }
                 }
             }

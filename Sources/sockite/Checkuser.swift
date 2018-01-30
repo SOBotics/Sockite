@@ -2,7 +2,7 @@ import Foundation
 
 class Checkuser: Command {
     init() {
-        super.init(syntax: ["checkuser"], args: 3, exec: { msg, args in
+        super.init(syntax: ["checkuser"], args: 3, exec: { msg, args, room in
             let session = URLSession(configuration: .default)
             dataTask?.cancel()
             if var urlComponents = URLComponents(string: "https://api.stackexchange.com/2.2/users/\(args[1]);\(args[2])/questions") {
