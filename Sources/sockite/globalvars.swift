@@ -1,6 +1,5 @@
 import Foundation
 
 // array of commands
-let commands: [Command] = [Alive(), Checkuser(), Say()]
+let commands: [Command] = [Alive(), Checkusers(), Say()]
 
-var dataTask: URLSessionDataTask?

@@ -1,10 +1,10 @@
 import Foundation
 
-class Checkuser: Command {
+class Checkusers: Command {
     init() {
-        super.init(syntax: ["checkuser"], args: 3, exec: { msg, args, room in
+        super.init(syntax: ["checkusers"], args: 3, exec: { msg, args, room in
+            var dataTask: URLSessionDataTask?
             let session = URLSession(configuration: .default)
-            dataTask?.cancel()
             if var urlComponents = URLComponents(string: "https://api.stackexchange.com/2.2/users/\(args[1]);\(args[2])/questions") {
                 urlComponents.query = "pagesize=100&order=desc&sort=activity&site=stackoverflow&filter=!9YdnSEcyO&key=OJ*iP6ih)G0W1CQFgKllSg(("
                 guard let url = urlComponents.url else {
@@ -21,7 +21,7 @@ class Checkuser: Command {
                         print(error.localizedDescription)
                     } else if let data = data, let response = response as? HTTPURLResponse, response.statusCode == 200 {
                         do {
-                            let json = try JSONDecoder().decode(CheckuserJSON.self, from: data)
+                            let json = try JSONDecoder().decode(QuestionJSON.self, from: data)
                             guard let items = json.items else {
                                 return
                             }

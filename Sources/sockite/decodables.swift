@@ -1,10 +1,4 @@
-struct CheckuserJSON: Decodable {
-    struct Owner: Decodable {
-        var reputation: Int?
-        var user_id: Int?
-        var display_name: String?
-        var link: String?
-    }
+struct QuestionJSON: Decodable {
     struct Item: Decodable {
         struct Answer: Decodable {
             var owner: Owner?
@@ -21,4 +15,13 @@ struct CheckuserJSON: Decodable {
         var title: String?
     }
     var items: [Item]?
+    var quota_remaining: Int?
+    var backoff: Int?
+}
+
+struct Owner: Decodable {
+    var reputation: Int?
+    var user_id: Int?
+    var display_name: String?
+    var link: String?
 }
