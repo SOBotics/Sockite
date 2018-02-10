@@ -13,6 +13,7 @@ struct QuestionJSON: Decodable {
         var question_id: Int?
         var link: String?
         var title: String?
+        var up_vote_count: Int?
     }
     var items: [Item]?
     var quota_remaining: Int?
