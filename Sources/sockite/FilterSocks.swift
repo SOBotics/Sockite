@@ -5,7 +5,7 @@ class FilterSocks {
         
     }
     
-    static func getScoreOfQuestions(user: String) -> [Int : (Float, [String])] {
+    static func getScoreOfQuestions(user: String) -> [Int : (Double, [String])] {
         var dataTask: URLSessionDataTask?
         let session = URLSession(configuration: .default)
         
@@ -24,7 +24,7 @@ class FilterSocks {
                 }
                 if let error = error {
                     print(error.localizedDescription)
-                } else if let data = data, let response = response as? HTTPURLResponse, response.statusCode == 200 {
+                } else if let data = data, response.statusCode == 200 {
                     do {
                         let json = try JSONDecoder().decode(QuestionJSON.self, from: data)
                         guard let items = json.items else {
@@ -32,10 +32,26 @@ class FilterSocks {
                         }
                         
                         // START FILTERING
-                        var socks = [:]
+                        var socks: [Int: [(Double, String?)]] = [:]
                         let filters = [sameAnswerer75, sameAnswerer100, haveUpvote]
                         for filter in filters {
                             let filterRes = filter(items)
+                            for (user, reason) in filterRes {
+                                socks[user]!.append(reason)
+                            }
+                        }
+                        // DONE FILTERING, RETURN RESULT
+                        var resDict: [Int : (Double, [String])] = [:]
+                        for (sock, ress) in socks {
+                            var finalScore = 0.0
+                            var reasons: [String] = []
+                            for res in ress {
+                                finalScore += res.0
+                                if let reason = res.1 {
+                                    reasons.append(reason)
+                                }
+                            }
+                            resDict[sock] = (finalScore, reasons)
                         }
                         
                         
@@ -50,7 +66,7 @@ class FilterSocks {
     }
     
     // 75% of accepted answers answered by same user
-    static func sameAnswerer75(_ items: [QuestionJSON.Item]) -> [Int : (Float, String?)] {
+    static func sameAnswerer75(_ items: [QuestionJSON.Item]) -> [Int : (Double, String?)] {
         if items.count <= 4 {
             return [:]
         }
@@ -63,14 +79,14 @@ class FilterSocks {
             }
         }
         let counts = answerOwners.reduce(into: [:]) { $0[$1, default: 0] += 1 }
-        var possibleSock: [Int : Float] = [:]
+        var possibleSock: [Int : Double] = [:]
         for (key, val) in counts {
-            if Float(val) / Float(answerOwners.count) > 0.75 {
-                possibleSock[key] = Float(val) / Float(answerOwners.count) * 6
+            if Double(val) / Double(answerOwners.count) > 0.75 {
+                possibleSock[key] = Double(val) / Double(answerOwners.count) * 6
             }
         }
         
-        var responseDict: [Int : (Float, String?)] = [:]
+        var responseDict: [Int : (Double, String?)] = [:]
         for (acc, score) in possibleSock {
             responseDict[acc] = (score, "\(score / 6.0 * 100.0)% of accepted answers are answered by same user (user: [\(acc)](https://stackoverflow.com/users/\(acc))")
         }
@@ -79,7 +95,7 @@ class FilterSocks {
     }
     
     // 100% of answers answered by same user
-    static func sameAnswerer100(_ items: [QuestionJSON.Item]) -> [Int : (Float, String?)] {
+    static func sameAnswerer100(_ items: [QuestionJSON.Item]) -> [Int : (Double, String?)] {
         if items.count > 4 {
             return [:]
         }
@@ -100,7 +116,7 @@ class FilterSocks {
     }
     
     // all questions have an upvote
-    static func haveUpvote(_ items: [QuestionJSON.Item]) -> [Int : (Float, String?)] {
+    static func haveUpvote(_ items: [QuestionJSON.Item]) -> [Int : (Double, String?)] {
         for item in items {
             if item.up_vote_count! <= 0 {
                 return [:]
