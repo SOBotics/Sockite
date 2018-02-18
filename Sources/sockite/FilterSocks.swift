@@ -2,9 +2,11 @@ import Foundation
 
 class FilterSocks {
     static func getScoreOfUserAndTarget(user: String, _ callback: @escaping (Int, String, String, Error) -> ()) {
-        
+        let qRes = getScoreOfQuestions(user: user)
     }
     
+    
+    // ==== QUESTION FILTERS ====
     static func getScoreOfQuestions(user: String) -> [Int : (Double, [String])] {
         var dataTask: URLSessionDataTask?
         let session = URLSession(configuration: .default)
@@ -124,5 +126,33 @@ class FilterSocks {
         }
         return [-1 : (2.3, "100% of questions have 1 upvote")]
     }
+    
+    // ==== ANSWER FILTERS ====
+    static func getScoreOfAnswers(user: String) -> [Int : (Double, [String])] {
+        var dataTask: URLSessionDataTask?
+        let session = URLSession(configuration: .default)
+        
+        if var urlComponents = URLComponents(string: "https://api.stackexchange.com/2.2/users/\(user)/questions") {
+            urlComponents.query = "pagesize=100&order=desc&sort=activity&site=stackoverflow&filter=!0V-ZwUEu0wMbto7XHeIh96H_K&key=OJ*iP6ih)G0W1CQFgKllSg(("
+            guard let url = urlComponents.url else {
+                return [:]
+            }
+            print(url)
+            
+            dataTask = session.dataTask(with: url) { data, response, error in
+                defer { dataTask = nil }
+                let response = response as! HTTPURLResponse
+                if response.statusCode != 200 {
+                    
+                }
+                if let error = error {
+                    print(error.localizedDescription)
+                } else if let data = data, response.statusCode == 200 {
+                }
+            }
+        }
+    }
+    
+    // 100%
 }
 
