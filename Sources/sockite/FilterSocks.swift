@@ -132,8 +132,8 @@ class FilterSocks {
         var dataTask: URLSessionDataTask?
         let session = URLSession(configuration: .default)
         
-        if var urlComponents = URLComponents(string: "https://api.stackexchange.com/2.2/users/\(user)/questions") {
-            urlComponents.query = "pagesize=100&order=desc&sort=activity&site=stackoverflow&filter=!0V-ZwUEu0wMbto7XHeIh96H_K&key=OJ*iP6ih)G0W1CQFgKllSg(("
+        if var urlComponents = URLComponents(string: "https://api.stackexchange.com/2.2/users/\(user)/answers") {
+            urlComponents.query = "pagesize=100&order=desc&sort=activity&site=stackoverflow&filter=!-*jbN.L_QwxL"
             guard let url = urlComponents.url else {
                 return [:]
             }
@@ -151,6 +151,7 @@ class FilterSocks {
                 }
             }
         }
+        return [:]
     }
     
     // 100%

@@ -26,3 +26,16 @@ struct Owner: Decodable {
     var display_name: String?
     var link: String?
 }
+
+struct AnswerJSON: Decodable {
+    struct Item: Decodable {
+        var owner: Owner?
+        var down_vote_count: Int?
+        var up_vote_count: Int?
+        var is_accepted: Bool?
+        var answer_id: Int?
+    }
+    var items: [Item]?
+    var quota_remaining: Int?
+    var backoff: Int?
+}
