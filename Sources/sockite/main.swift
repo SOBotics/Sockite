@@ -15,7 +15,7 @@ let sobotics = ChatRoom(client: client, host: .stackOverflow, roomID: 111347)
 try! sobotics.join()
 
 let rooms = [sobotics]
-broadcastMessage("[ 玄 | Sockite ] started in test mode (running on paper1111/iMac)")
+broadcastMessage("[ [Sockite](https://github.com/SOBotics/Sockite) ] started in test mode (running on paper1111/iMac)")
 pingService.delegate = RedundaPingDelegate()
 pingService.ping()
 pingService.startPinging()

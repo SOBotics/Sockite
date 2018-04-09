@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "Clibwebsockets",
+        "repositoryURL": "git://github.com/NobodyNada/Clibwebsockets",
+        "state": {
+          "branch": null,
+          "revision": "0b1eb3ad0f691d7d476f1e5dc89ed7cc3b89583d",
+          "version": "1.2.0"
+        }
+      },
+      {
         "package": "COpenSSL",
         "repositoryURL": "git://github.com/NobodyNada/COpenSSL",
         "state": {
@@ -20,33 +29,6 @@
         }
       },
       {
-        "package": "Clibwebsockets",
-        "repositoryURL": "git://github.com/NobodyNada/Clibwebsockets",
-        "state": {
-          "branch": null,
-          "revision": "0b1eb3ad0f691d7d476f1e5dc89ed7cc3b89583d",
-          "version": "1.2.0"
-        }
-      },
-      {
-        "package": "HeliumLogger",
-        "repositoryURL": "https://github.com/IBM-Swift/HeliumLogger.git",
-        "state": {
-          "branch": null,
-          "revision": "2afeb4c02f5a48a7fbd081fe8607b91eeebd7ecb",
-          "version": "1.7.1"
-        }
-      },
-      {
-        "package": "LoggerAPI",
-        "repositoryURL": "https://github.com/IBM-Swift/LoggerAPI.git",
-        "state": {
-          "branch": null,
-          "revision": "6b62fe66da9b8794d6581e5c341710eea3173cd4",
-          "version": "1.7.1"
-        }
-      },
-      {
         "package": "SwiftChatSE",
         "repositoryURL": "https://github.com/SOBotics/SwiftChatSE.git",
         "state": {
@@ -56,12 +38,12 @@
         }
       },
       {
-        "package": "SwiftyBeaver",
-        "repositoryURL": "https://github.com/SwiftyBeaver/SwiftyBeaver.git",
+        "package": "swiftredunda",
+        "repositoryURL": "https://github.com/SOBotics/SwiftRedunda.git",
         "state": {
           "branch": null,
-          "revision": "f24921e83cc356fce6ee12cb6120ab57896de3d6",
-          "version": "1.5.1"
+          "revision": "6a62ffe9d8bcf62ec055ec68fe3174b170f07296",
+          "version": "0.1.3"
         }
       },
       {
@@ -71,15 +53,6 @@
           "branch": null,
           "revision": "95f45caf07472ec78223ebada45255086a85b01a",
           "version": "0.5.0"
-        }
-      },
-      {
-        "package": "swiftredunda",
-        "repositoryURL": "https://github.com/SOBotics/SwiftRedunda.git",
-        "state": {
-          "branch": null,
-          "revision": "6a62ffe9d8bcf62ec055ec68fe3174b170f07296",
-          "version": "0.1.3"
         }
       }
     ]

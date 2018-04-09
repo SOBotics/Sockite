@@ -1,20 +1,41 @@
 import Foundation
 
 class FilterSocks {
-    static func getScoreOfUserAndTarget(user: String, _ callback: @escaping (Int, String, String, Error) -> ()) {
-        let qRes = getScoreOfQuestions(user: user)
+    
+    enum FilterSocksError: Error {
+        case invalidJson
+        case invalidUrlComponents
+    }
+    //                                                                  ([score, target user id, reason], error)
+    static func getScoreOfUserAndTarget(user: String, _ callback: @escaping ((Int, String, String)?, Error?) -> ()) {
+        getScoreOfQuestions(user: user, callback: { qRes, err in
+            if let err = err {
+                callback(nil, err)
+            }
+            if let qRes = qRes {
+                getScoreOfAnswers(user: user, callback: { aRes, err in
+                    if let err = err {
+                        callback(nil, err)
+                    }
+                    if let qRes = aRes {
+                        
+                    }
+                })
+            }
+        })
     }
     
     
     // ==== QUESTION FILTERS ====
-    static func getScoreOfQuestions(user: String) -> [Int : (Double, [String])] {
+    static func getScoreOfQuestions(user: String, callback: @escaping ([Int : (Double, [String])]?, Error?) -> ()) {
         var dataTask: URLSessionDataTask?
         let session = URLSession(configuration: .default)
         
         if var urlComponents = URLComponents(string: "https://api.stackexchange.com/2.2/users/\(user)/questions") {
             urlComponents.query = "pagesize=100&order=desc&sort=activity&site=stackoverflow&filter=!0V-ZwUEu0wMbto7XHeIh96H_K&key=OJ*iP6ih)G0W1CQFgKllSg(("
             guard let url = urlComponents.url else {
-                return [:]
+                callback(nil, FilterSocksError.invalidUrlComponents)
+                return
             }
             print(url)
             
@@ -24,12 +45,11 @@ class FilterSocks {
                 if response.statusCode != 200 {
                     
                 }
-                if let error = error {
-                    print(error.localizedDescription)
-                } else if let data = data, response.statusCode == 200 {
+                if let data = data, response.statusCode == 200 {
                     do {
                         let json = try JSONDecoder().decode(QuestionJSON.self, from: data)
                         guard let items = json.items else {
+                            callback(nil, FilterSocksError.invalidJson)
                             return
                         }
                         
@@ -37,7 +57,7 @@ class FilterSocks {
                         var socks: [Int: [(Double, String?)]] = [:]
                         let filters = [sameAnswerer75, sameAnswerer100, haveUpvote]
                         for filter in filters {
-                            let filterRes = filter(items)
+                            let filterRes = try filter(items)
                             for (user, reason) in filterRes {
                                 socks[user]!.append(reason)
                             }
@@ -55,16 +75,16 @@ class FilterSocks {
                             }
                             resDict[sock] = (finalScore, reasons)
                         }
+                        callback(resDict, nil)
                         
-                        
-                    } catch let jsonError {
+                    } catch {
+                        callback(nil, error)
                     }
                 } else {
                 }
             }
             dataTask?.resume()
         }
-        return [:]
     }
     
     // 75% of accepted answers answered by same user
@@ -118,7 +138,7 @@ class FilterSocks {
     }
     
     // all questions have an upvote
-    static func haveUpvote(_ items: [QuestionJSON.Item]) -> [Int : (Double, String?)] {
+    static func haveUpvote(_ items: [QuestionJSON.Item]) throws -> [Int : (Double, String?)] {
         for item in items {
             if item.up_vote_count! <= 0 {
                 return [:]
@@ -128,14 +148,15 @@ class FilterSocks {
     }
     
     // ==== ANSWER FILTERS ====
-    static func getScoreOfAnswers(user: String) -> [Int : (Double, [String])] {
+    static func getScoreOfAnswers(user: String, callback: @escaping ([Int : (Double, [String])]?, Error?) -> ()) {
         var dataTask: URLSessionDataTask?
         let session = URLSession(configuration: .default)
         
         if var urlComponents = URLComponents(string: "https://api.stackexchange.com/2.2/users/\(user)/answers") {
             urlComponents.query = "pagesize=100&order=desc&sort=activity&site=stackoverflow&filter=!-*jbN.L_QwxL"
             guard let url = urlComponents.url else {
-                return [:]
+                callback(nil, FilterSocksError.invalidUrlComponents)
+                return
             }
             print(url)
             
@@ -145,15 +166,20 @@ class FilterSocks {
                 if response.statusCode != 200 {
                     
                 }
-                if let error = error {
-                    print(error.localizedDescription)
-                } else if let data = data, response.statusCode == 200 {
+                if let data = data, response.statusCode == 200 {
+                    do {
+                        let json = try JSONDecoder().decode(QuestionJSON.self, from: data)
+                        guard let items = json.items else {
+                            callback(nil, FilterSocksError.invalidJson)
+                            return
+                        }
+                    } catch let jsonError {
+                        callback(nil, jsonError)
+                    }
                 }
             }
         }
-        return [:]
     }
     
-    // 100%
 }
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E861D390205CD71E00FE4686 /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = E861D38F205CD71E00FE4686 /* Help.swift */; };
+		E861D392205CE28800FE4686 /* CommandsCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E861D391205CE28800FE4686 /* CommandsCommand.swift */; };
 		E8696E41201C83F00085A793 /* Say.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8696E40201C83F00085A793 /* Say.swift */; };
 		E8696E43201C87AA0085A793 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8696E42201C87AA0085A793 /* utils.swift */; };
 		E8F1C1022020A1960032F075 /* FilterSocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F1C1012020A1960032F075 /* FilterSocks.swift */; };
@@ -114,6 +116,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E861D38F205CD71E00FE4686 /* Help.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
+		E861D391205CE28800FE4686 /* CommandsCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandsCommand.swift; sourceTree = "<group>"; };
 		E8696E40201C83F00085A793 /* Say.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Say.swift; sourceTree = "<group>"; };
 		E8696E42201C87AA0085A793 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
 		E8F1C1012020A1960032F075 /* FilterSocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSocks.swift; sourceTree = "<group>"; };
@@ -394,6 +398,8 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_9 /* Alive.swift */,
+				E861D391205CE28800FE4686 /* CommandsCommand.swift */,
+				E861D38F205CD71E00FE4686 /* Help.swift */,
 				E8F1C1012020A1960032F075 /* FilterSocks.swift */,
 				E8696E40201C83F00085A793 /* Say.swift */,
 				E8696E42201C87AA0085A793 /* utils.swift */,
@@ -708,8 +714,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				E861D390205CD71E00FE4686 /* Help.swift in Sources */,
 				E8696E43201C87AA0085A793 /* utils.swift in Sources */,
 				E8F1C1022020A1960032F075 /* FilterSocks.swift in Sources */,
+				E861D392205CE28800FE4686 /* CommandsCommand.swift in Sources */,
 				OBJ_91 /* Package.swift in Sources */,
 				E8696E41201C83F00085A793 /* Say.swift in Sources */,
 			);

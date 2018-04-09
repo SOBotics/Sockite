@@ -1,5 +1,3 @@
-import Foundation
-
 // array of commands
-let commands: [Command] = [Alive(), Checkusers(), Say()]
+let commands: [Command] = [Alive(), Checkusers(), Say(), Help(), Commands()]
 
