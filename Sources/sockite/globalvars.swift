@@ -1,3 +1,3 @@
 // array of commands
-let commands: [Command] = [Alive(), Checkusers(), Say(), Help(), Commands()]
+let commands: [Command] = [Alive(), Checkusers(), Say(), Help(), Commands(), Checkuser()]
 

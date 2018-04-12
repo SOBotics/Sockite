@@ -1,5 +1,5 @@
 class Commands: Command {
-    init () {
+    init() {
         super.init(syntax: ["commands"], args: 1, exec: { msg, _, room in
             var cmdMsg = ""
             for cmd in commands {
@@ -15,5 +15,7 @@ class Commands: Command {
             }
             room.postMessage(":\(msg.id!) Here are my commands:\n \(cmdMsg)")
         })
+        
+        self.description = "returns a list of commands"
     }
 }

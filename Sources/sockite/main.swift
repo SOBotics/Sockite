@@ -11,10 +11,14 @@ let pingService = RedundaPingService(key: creds.redunda_key, version: "0.1.0")
 let client = Client()
 try! client.login(email: creds.email, password: creds.password)
 
-let sobotics = ChatRoom(client: client, host: .stackOverflow, roomID: 111347)
-try! sobotics.join()
+var rooms: [ChatRoom] = []
 
-let rooms = [sobotics]
+for requiredRoom in creds.rooms {
+    let room = ChatRoom(client: client, host: .stackOverflow, roomID: requiredRoom)
+    try! room.join()
+    rooms.append(room)
+}
+
 broadcastMessage("[ [Sockite](https://github.com/SOBotics/Sockite) ] started in test mode (running on paper1111/iMac)")
 pingService.delegate = RedundaPingDelegate()
 pingService.ping()

@@ -6,9 +6,11 @@ class FilterSocks {
         case invalidJson
         case invalidUrlComponents
     }
-    //                                                                  ([score, target user id, reason], error)
-    static func getScoreOfUserAndTarget(user: String, _ callback: @escaping ((Int, String, String)?, Error?) -> ()) {
+    
+    //                                                                  ([target user id: (score, reason)], error)
+    static func getScoreOfUserAndTarget(user: String, _ callback: @escaping ([Int: (Double, String)]?, Error?) -> ()) {
         getScoreOfQuestions(user: user, callback: { qRes, err in
+            var resDict: [Int: (Double, String)] = [:]
             if let err = err {
                 callback(nil, err)
             }
@@ -17,10 +19,28 @@ class FilterSocks {
                     if let err = err {
                         callback(nil, err)
                     }
-                    if let qRes = aRes {
-                        
+                    if let aRes = aRes {
+                        for (qSock, data) in qRes {
+                            if let sock = resDict[qSock] {
+                                let newScore = sock.0 + data.0
+                                let newReason = sock.1 + ", " + data.1.joined(separator: ", ")
+                                resDict[qSock] = (newScore, newReason)
+                            }
+                        }
+                        for (aSock, data) in aRes {
+                            if let sock = resDict[aSock] {
+                                let newScore = sock.0 + data.0
+                                let newReason = sock.1 + ", " + data.1.joined(separator: ", ")
+                                resDict[aSock] = (newScore, newReason)
+                            }
+                        }
                     }
                 })
+            }
+            if !resDict.isEmpty {
+                callback(resDict, nil)
+            } else {
+                callback(nil, nil)
             }
         })
     }
@@ -59,7 +79,11 @@ class FilterSocks {
                         for filter in filters {
                             let filterRes = try filter(items)
                             for (user, reason) in filterRes {
-                                socks[user]!.append(reason)
+                                if socks[user] != nil {
+                                    socks[user]!.append(reason)
+                                } else {
+                                    socks[user] = [reason]
+                                }
                             }
                         }
                         // DONE FILTERING, RETURN RESULT
@@ -94,8 +118,17 @@ class FilterSocks {
         }
         var answerOwners: [Int] = []
         for item in items {
-            for answer in item.answers! {
-                if answer.is_accepted! {
+            guard let answers = item.answers else {
+                print("item.answers is nil, continuing...")
+                continue
+            }
+            for answer in answers {
+                guard let isAccepted = answer.is_accepted else {
+                    print("answer.is_accepted is nil!")
+                    broadcastMessage("Error occured while proccesing sameAnswerer75, see the log for more details (@paper)")
+                    continue
+                }
+                if isAccepted {
                     answerOwners.append(answer.owner!.user_id!)
                 }
             }
@@ -123,7 +156,12 @@ class FilterSocks {
         }
         var answerOwners: [Int] = []
         for item in items {
-            for answer in item.answers! {
+            guard let answers = item.answers else {
+                print("item.answers is nil!")
+                broadcastMessage("Error occured while proccesing sameAnswerer100, see the log for more details (@paper)")
+                continue
+            }
+            for answer in answers {
                 answerOwners.append(answer.owner!.user_id!)
             }
         }
@@ -140,7 +178,12 @@ class FilterSocks {
     // all questions have an upvote
     static func haveUpvote(_ items: [QuestionJSON.Item]) throws -> [Int : (Double, String?)] {
         for item in items {
-            if item.up_vote_count! <= 0 {
+            guard let upvoteCount = item.up_vote_count else {
+                print("item.up_vote_count is nil!")
+                broadcastMessage("Error occured while proccesing haveUpvote, see the log for more details (@paper)")
+                continue
+            }
+            if upvoteCount <= 0 {
                 return [:]
             }
         }

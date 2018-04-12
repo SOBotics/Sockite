@@ -9,5 +9,6 @@ class Say: Command {
             }
             room.postMessage(sayMsg)
         })
+        self.description = "repeat the argument provided"
     }
 }

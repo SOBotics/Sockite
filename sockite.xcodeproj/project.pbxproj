@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E8447F31207E2D6B00D45AC7 /* LogHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8447F30207E2D6B00D45AC7 /* LogHelper.swift */; };
 		E861D390205CD71E00FE4686 /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = E861D38F205CD71E00FE4686 /* Help.swift */; };
 		E861D392205CE28800FE4686 /* CommandsCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E861D391205CE28800FE4686 /* CommandsCommand.swift */; };
 		E8696E41201C83F00085A793 /* Say.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8696E40201C83F00085A793 /* Say.swift */; };
 		E8696E43201C87AA0085A793 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8696E42201C87AA0085A793 /* utils.swift */; };
+		E8CBDD53207CEB48002D4126 /* Checkuser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CBDD52207CEB48002D4126 /* Checkuser.swift */; };
 		E8F1C1022020A1960032F075 /* FilterSocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F1C1012020A1960032F075 /* FilterSocks.swift */; };
 		OBJ_103 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* Package.swift */; };
 		OBJ_109 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* Package.swift */; };
 		OBJ_115 /* Alive.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Alive.swift */; };
-		OBJ_116 /* Checkuser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Checkuser.swift */; };
+		OBJ_116 /* Checkusers.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Checkusers.swift */; };
 		OBJ_117 /* Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Commands.swift */; };
 		OBJ_118 /* Creds.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Creds.swift */; };
 		OBJ_119 /* RedundaPingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* RedundaPingDelegate.swift */; };
@@ -116,12 +118,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E8447F30207E2D6B00D45AC7 /* LogHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogHelper.swift; sourceTree = "<group>"; };
 		E861D38F205CD71E00FE4686 /* Help.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
 		E861D391205CE28800FE4686 /* CommandsCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandsCommand.swift; sourceTree = "<group>"; };
 		E8696E40201C83F00085A793 /* Say.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Say.swift; sourceTree = "<group>"; };
 		E8696E42201C87AA0085A793 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
+		E8CBDD52207CEB48002D4126 /* Checkuser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkuser.swift; sourceTree = "<group>"; };
 		E8F1C1012020A1960032F075 /* FilterSocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSocks.swift; sourceTree = "<group>"; };
-		OBJ_10 /* Checkuser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkuser.swift; sourceTree = "<group>"; };
+		OBJ_10 /* Checkusers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkusers.swift; sourceTree = "<group>"; };
 		OBJ_11 /* Commands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commands.swift; sourceTree = "<group>"; };
 		OBJ_12 /* Creds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creds.swift; sourceTree = "<group>"; };
 		OBJ_13 /* RedundaPingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedundaPingDelegate.swift; sourceTree = "<group>"; };
@@ -401,9 +405,11 @@
 				E861D391205CE28800FE4686 /* CommandsCommand.swift */,
 				E861D38F205CD71E00FE4686 /* Help.swift */,
 				E8F1C1012020A1960032F075 /* FilterSocks.swift */,
+				E8447F30207E2D6B00D45AC7 /* LogHelper.swift */,
 				E8696E40201C83F00085A793 /* Say.swift */,
 				E8696E42201C87AA0085A793 /* utils.swift */,
-				OBJ_10 /* Checkuser.swift */,
+				OBJ_10 /* Checkusers.swift */,
+				E8CBDD52207CEB48002D4126 /* Checkuser.swift */,
 				OBJ_11 /* Commands.swift */,
 				OBJ_12 /* Creds.swift */,
 				OBJ_13 /* RedundaPingDelegate.swift */,
@@ -626,7 +632,7 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_115 /* Alive.swift in Sources */,
-				OBJ_116 /* Checkuser.swift in Sources */,
+				OBJ_116 /* Checkusers.swift in Sources */,
 				OBJ_117 /* Commands.swift in Sources */,
 				OBJ_118 /* Creds.swift in Sources */,
 				OBJ_119 /* RedundaPingDelegate.swift in Sources */,
@@ -718,8 +724,10 @@
 				E8696E43201C87AA0085A793 /* utils.swift in Sources */,
 				E8F1C1022020A1960032F075 /* FilterSocks.swift in Sources */,
 				E861D392205CE28800FE4686 /* CommandsCommand.swift in Sources */,
+				E8447F31207E2D6B00D45AC7 /* LogHelper.swift in Sources */,
 				OBJ_91 /* Package.swift in Sources */,
 				E8696E41201C83F00085A793 /* Say.swift in Sources */,
+				E8CBDD53207CEB48002D4126 /* Checkuser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
