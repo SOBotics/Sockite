@@ -24,6 +24,10 @@ class Checkusers: Command {
                             guard let items = json.items else {
                                 return
                             }
+                            if items.isEmpty {
+                                room.postMessage("No socks found!")
+                                return
+                            }
                             for item in items {
                                 if let answers = item.answers {
                                     for answer in answers {
@@ -37,6 +41,10 @@ class Checkusers: Command {
                                         }
                                     }
                                 }
+                            }
+                            if resToChat == "" {
+                                room.postMessage("No socks found!")
+                                return
                             }
                             room.postMessage(resToChat)
                         } catch let jsonError {

@@ -19,10 +19,12 @@ for requiredRoom in creds.rooms {
     rooms.append(room)
 }
 
-broadcastMessage("[ [Sockite](https://github.com/SOBotics/Sockite) ] started in test mode (running on paper1111/iMac)")
 pingService.delegate = RedundaPingDelegate()
 pingService.ping()
 pingService.startPinging()
+
+Thread.sleep(forTimeInterval: 20)
+broadcastMessage("[ [Sockite](https://github.com/SOBotics/Sockite) ] started (running on \(pingService.getLocation()))")
 
 for room in rooms {
     room.onMessage { msg, edit in

@@ -73,6 +73,11 @@ class FilterSocks {
                             return
                         }
                         
+                        if items.isEmpty {
+                            callback([:], nil)
+                            return
+                        }
+                        
                         // START FILTERING
                         var socks: [Int: [(Double, String?)]] = [:]
                         let filters = [sameAnswerer75, sameAnswerer100, haveUpvote]
@@ -214,6 +219,11 @@ class FilterSocks {
                         let json = try JSONDecoder().decode(QuestionJSON.self, from: data)
                         guard let items = json.items else {
                             callback(nil, FilterSocksError.invalidJson)
+                            return
+                        }
+                        
+                        if items.isEmpty {
+                            callback([:], nil)
                             return
                         }
                     } catch let jsonError {

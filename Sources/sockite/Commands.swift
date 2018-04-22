@@ -6,6 +6,7 @@ class Command {
     var args: Int
     var handler: (ChatMessage, [String], ChatRoom) -> ()
     var description: String?
+    var reply = false
     
     init(syntax: [String], args: Int, exec: @escaping (ChatMessage, [String], ChatRoom) -> ()) {
         self.syntax = syntax
@@ -16,6 +17,7 @@ class Command {
 
 class CommandService {
     func recieveMsg(_ msg: ChatMessage, _ isEdit: Bool, _ room: ChatRoom) {
+        checkForChooChoo(inMessage: msg)
         var msgContent: String = msg.content
         if !msgContent.lowercased().starts(with: "@sock") {
             return

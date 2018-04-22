@@ -14,5 +14,7 @@ class Checkuser: Command {
                 }
             })
         })
+        
+        self.description = "checks a user's possible socks"
     }
 }
