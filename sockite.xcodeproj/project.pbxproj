@@ -455,7 +455,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_16 /* commands */ = {
+		OBJ_16 /* Commands */ = {
 			isa = PBXGroup;
 			children = (
 				OBJ_17 /* Alive.swift */,
@@ -464,10 +464,10 @@
 				OBJ_20 /* CommandsCommand.swift */,
 				OBJ_21 /* Delete.swift */,
 			);
-			path = commands;
+			path = Commands;
 			sourceTree = "<group>";
 		};
-		OBJ_24 /* utils & helpers */ = {
+		OBJ_24 /* Utils and Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				OBJ_25 /* LogHelper.swift */,
@@ -476,7 +476,7 @@
 				OBJ_28 /* decodables.swift */,
 				OBJ_29 /* utils.swift */,
 			);
-			path = "utils & helpers";
+			path = "Utils and Helpers";
 			sourceTree = "<group>";
 		};
 		OBJ_30 /* Tests */ = {
@@ -644,8 +644,8 @@
 		OBJ_8 /* sockite */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_24 /* utils & helpers */,
-				OBJ_16 /* commands */,
+				OBJ_24 /* Utils and Helpers */,
+				OBJ_16 /* Commands */,
 				OBJ_9 /* Commands.swift */,
 				OBJ_10 /* Creds.swift */,
 				OBJ_11 /* FilterSocks.swift */,
