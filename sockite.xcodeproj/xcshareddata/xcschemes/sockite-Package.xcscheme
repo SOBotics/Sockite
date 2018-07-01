@@ -14,9 +14,37 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "sockite::sockite"
+               BuildableName = "sockite"
+               BlueprintName = "sockite"
+               ReferencedContainer = "container:sockite.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "swiftredunda::SwiftRedunda"
                BuildableName = "SwiftRedunda.framework"
                BlueprintName = "SwiftRedunda"
+               ReferencedContainer = "container:sockite.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "SwiftChatSE::SwiftChatSE"
+               BuildableName = "SwiftChatSE.framework"
+               BlueprintName = "SwiftChatSE"
                ReferencedContainer = "container:sockite.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -62,34 +90,6 @@
                ReferencedContainer = "container:sockite.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "SwiftChatSE::SwiftChatSE"
-               BuildableName = "SwiftChatSE.framework"
-               BlueprintName = "SwiftChatSE"
-               ReferencedContainer = "container:sockite.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "sockite::sockite"
-               BuildableName = "sockite"
-               BlueprintName = "sockite"
-               ReferencedContainer = "container:sockite.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -115,9 +115,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "swiftredunda::SwiftRedunda"
-            BuildableName = "SwiftRedunda.framework"
-            BlueprintName = "SwiftRedunda"
+            BlueprintIdentifier = "sockite::sockite"
+            BuildableName = "sockite"
+            BlueprintName = "sockite"
             ReferencedContainer = "container:sockite.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

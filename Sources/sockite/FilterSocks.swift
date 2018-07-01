@@ -60,10 +60,10 @@ class FilterSocks {
             Log.logInfo(url.absoluteString)
             
             dataTask = session.dataTask(with: url) { data, response, error in
-                defer { dataTask = nil }
+                defer { dataTask = nil; session.finishTasksAndInvalidate() }
                 let response = response as! HTTPURLResponse
                 if response.statusCode != 200 {
-                    
+                    Log.handle(error: "Invalid network response \(response.statusCode)")
                 }
                 if let data = data, response.statusCode == 200 {
                     do {
@@ -209,7 +209,7 @@ class FilterSocks {
             Log.logInfo(url.absoluteString)
             
             dataTask = session.dataTask(with: url) { data, response, error in
-                defer { dataTask = nil }
+                defer { dataTask = nil; session.finishTasksAndInvalidate() }
                 let response = response as! HTTPURLResponse
                 if response.statusCode != 200 {
                     

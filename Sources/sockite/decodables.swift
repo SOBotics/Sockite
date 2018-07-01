@@ -39,3 +39,12 @@ struct AnswerJSON: Decodable {
     var quota_remaining: Int?
     var backoff: Int?
 }
+
+struct BadgeReciepents: Decodable {
+    struct Item: Decodable {
+        var user: Owner?
+    }
+    var items: [Item]?
+    var quota_remaining: Int?
+    var backoff: Int?
+}

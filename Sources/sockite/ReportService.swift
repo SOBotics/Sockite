@@ -2,6 +2,4 @@ class ReportService {
     func start() {
         
     }
-    
-    
 }
