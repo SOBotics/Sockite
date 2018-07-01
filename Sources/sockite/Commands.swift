@@ -17,7 +17,8 @@ class Command {
 
 class CommandService {
     func recieveMsg(_ msg: ChatMessage, _ isEdit: Bool, _ room: ChatRoom) {
-        checkForChooChoo(inMessage: msg)
+        checkFor()
+        //checkForChooChoo(inMessage: msg)
         var msgContent: String = msg.content
         if !msgContent.lowercased().starts(with: "@sock") {
             return
@@ -35,8 +36,10 @@ class CommandService {
                         print("cmd works")
                         if msg.user.id == 8449076 {
                             room.postMessage("Don't try to break me...")
+                            continue
                         }
                         command.handler(msg, msgParts, room)
+                        return
                     }
                 }
             }

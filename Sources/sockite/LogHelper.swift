@@ -18,11 +18,19 @@ struct Log {
         }
     }
     
+    static func logWarning(_ str: String, consoleOutputPrefix: String? = nil) {
+        
+    }
+    
     static func logInfo(_ str: String, consoleOutputPrefix: String? = nil) {
         if let prefix = consoleOutputPrefix {
             Log.log("[INFO][\(prefix)] \(str)")
         } else {
             Log.log("[INFO] \(str)")
         }
+    }
+    
+    static func logReportService() {
+        // stub
     }
 }

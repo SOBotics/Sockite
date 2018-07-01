@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E804C29020DDD47A0035DAB2 /* SEAPIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E804C28F20DDD47A0035DAB2 /* SEAPIHelper.swift */; };
 		E806B605208C813E00D33A5A /* Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = E806B604208C813E00D33A5A /* Delete.swift */; };
 		E836AA7E207F96BA00B26276 /* ReportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E836AA7D207F96BA00B26276 /* ReportService.swift */; };
 		E8447F31207E2D6B00D45AC7 /* LogHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8447F30207E2D6B00D45AC7 /* LogHelper.swift */; };
@@ -120,6 +121,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E804C28F20DDD47A0035DAB2 /* SEAPIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SEAPIHelper.swift; sourceTree = "<group>"; };
 		E806B604208C813E00D33A5A /* Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delete.swift; sourceTree = "<group>"; };
 		E836AA7D207F96BA00B26276 /* ReportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportService.swift; sourceTree = "<group>"; };
 		E8447F30207E2D6B00D45AC7 /* LogHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogHelper.swift; sourceTree = "<group>"; };
@@ -415,6 +417,7 @@
 				OBJ_10 /* Checkusers.swift */,
 				E806B604208C813E00D33A5A /* Delete.swift */,
 				E836AA7D207F96BA00B26276 /* ReportService.swift */,
+				E804C28F20DDD47A0035DAB2 /* SEAPIHelper.swift */,
 				E8CBDD52207CEB48002D4126 /* Checkuser.swift */,
 				OBJ_11 /* Commands.swift */,
 				OBJ_12 /* Creds.swift */,
@@ -726,6 +729,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				E804C29020DDD47A0035DAB2 /* SEAPIHelper.swift in Sources */,
 				E806B605208C813E00D33A5A /* Delete.swift in Sources */,
 				E861D390205CD71E00FE4686 /* Help.swift in Sources */,
 				E8696E43201C87AA0085A793 /* utils.swift in Sources */,

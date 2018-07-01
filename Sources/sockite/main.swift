@@ -23,7 +23,11 @@ pingService.delegate = RedundaPingDelegate()
 pingService.ping()
 pingService.startPinging()
 
-Thread.sleep(forTimeInterval: 20)
+for sec in (1...20).reversed() {
+    Log.logInfo("Loading... (\(sec) seconds left)")
+    Thread.sleep(forTimeInterval: 1)
+}
+Log.logInfo("Sockite started!")
 broadcastMessage("[ [Sockite](https://github.com/SOBotics/Sockite) ] started (running on \(pingService.getLocation()))")
 
 for room in rooms {
