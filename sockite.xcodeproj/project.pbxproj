@@ -463,6 +463,8 @@
 				OBJ_19 /* Checkusers.swift */,
 				OBJ_20 /* CommandsCommand.swift */,
 				OBJ_21 /* Delete.swift */,
+				OBJ_15 /* Say.swift */,
+				OBJ_12 /* Help.swift */,
 			);
 			path = Commands;
 			sourceTree = "<group>";
@@ -649,10 +651,8 @@
 				OBJ_9 /* Commands.swift */,
 				OBJ_10 /* Creds.swift */,
 				OBJ_11 /* FilterSocks.swift */,
-				OBJ_12 /* Help.swift */,
 				OBJ_13 /* RedundaPingDelegate.swift */,
 				OBJ_14 /* ReportService.swift */,
-				OBJ_15 /* Say.swift */,
 				OBJ_22 /* globalvars.swift */,
 				OBJ_23 /* main.swift */,
 			);
