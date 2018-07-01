@@ -23,10 +23,11 @@ pingService.delegate = RedundaPingDelegate()
 pingService.ping()
 pingService.startPinging()
 
-for sec in (1...20).reversed() {
-    Log.logInfo("Loading... (\(sec) seconds left)")
-    Thread.sleep(forTimeInterval: 1)
-}
+Log.logInfo("Initializing network connections...")
+Thread.sleep(forTimeInterval: 10)
+Log.logInfo("Connecting database...")
+let sqliteHelper = SQLiteHelper()
+sqliteHelper.connect()
 Log.logInfo("Sockite started!")
 broadcastMessage("[ [Sockite](https://github.com/SOBotics/Sockite) ] started (running on \(pingService.getLocation()))")
 
