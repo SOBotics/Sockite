@@ -11,7 +11,3 @@ func checkForChooChoo(inMessage msg: ChatMessage) {
         msg.room.postMessage("[🚃](https://youtu.be/bQGj3F5KTB8?t=13s)")
     }
 }
-
-func checkFor() {
-    print("checking")
-}

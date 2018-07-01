@@ -57,7 +57,7 @@ class FilterSocks {
                 callback(nil, FilterSocksError.invalidUrlComponents)
                 return
             }
-            print(url)
+            Log.logInfo(url.absoluteString)
             
             dataTask = session.dataTask(with: url) { data, response, error in
                 defer { dataTask = nil }
@@ -124,12 +124,12 @@ class FilterSocks {
         var answerOwners: [Int] = []
         for item in items {
             guard let answers = item.answers else {
-                print("item.answers is nil, continuing...")
+                Log.logWarning("item.answers is nil, continuing...")
                 continue
             }
             for answer in answers {
                 guard let isAccepted = answer.is_accepted else {
-                    print("answer.is_accepted is nil!")
+                    Log.logWarning("answer.is_accepted is nil!")
                     broadcastMessage("Error occured while proccesing sameAnswerer75, see the log for more details (@paper)")
                     continue
                 }
@@ -162,7 +162,7 @@ class FilterSocks {
         var answerOwners: [Int] = []
         for item in items {
             guard let answers = item.answers else {
-                print("item.answers is nil!")
+                Log.logWarning("item.answers is nil!")
                 broadcastMessage("Error occured while proccesing sameAnswerer100, see the log for more details (@paper)")
                 continue
             }
@@ -184,7 +184,7 @@ class FilterSocks {
     static func haveUpvote(_ items: [QuestionJSON.Item]) throws -> [Int : (Double, String?)] {
         for item in items {
             guard let upvoteCount = item.up_vote_count else {
-                print("item.up_vote_count is nil!")
+                Log.logWarning("item.up_vote_count is nil!")
                 broadcastMessage("Error occured while proccesing haveUpvote, see the log for more details (@paper)")
                 continue
             }
@@ -206,7 +206,7 @@ class FilterSocks {
                 callback(nil, FilterSocksError.invalidUrlComponents)
                 return
             }
-            print(url)
+            Log.logInfo(url.absoluteString)
             
             dataTask = session.dataTask(with: url) { data, response, error in
                 defer { dataTask = nil }

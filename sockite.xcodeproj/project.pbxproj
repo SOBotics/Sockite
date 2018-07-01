@@ -7,111 +7,131 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E804C29020DDD47A0035DAB2 /* SEAPIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E804C28F20DDD47A0035DAB2 /* SEAPIHelper.swift */; };
-		E806B605208C813E00D33A5A /* Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = E806B604208C813E00D33A5A /* Delete.swift */; };
-		E836AA7E207F96BA00B26276 /* ReportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E836AA7D207F96BA00B26276 /* ReportService.swift */; };
-		E8447F31207E2D6B00D45AC7 /* LogHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8447F30207E2D6B00D45AC7 /* LogHelper.swift */; };
-		E861D390205CD71E00FE4686 /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = E861D38F205CD71E00FE4686 /* Help.swift */; };
-		E861D392205CE28800FE4686 /* CommandsCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E861D391205CE28800FE4686 /* CommandsCommand.swift */; };
-		E8696E41201C83F00085A793 /* Say.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8696E40201C83F00085A793 /* Say.swift */; };
-		E8696E43201C87AA0085A793 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8696E42201C87AA0085A793 /* utils.swift */; };
-		E8CBDD53207CEB48002D4126 /* Checkuser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CBDD52207CEB48002D4126 /* Checkuser.swift */; };
-		E8F1C1022020A1960032F075 /* FilterSocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F1C1012020A1960032F075 /* FilterSocks.swift */; };
-		OBJ_103 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* Package.swift */; };
-		OBJ_109 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* Package.swift */; };
-		OBJ_115 /* Alive.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Alive.swift */; };
-		OBJ_116 /* Checkusers.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Checkusers.swift */; };
-		OBJ_117 /* Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Commands.swift */; };
-		OBJ_118 /* Creds.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Creds.swift */; };
-		OBJ_119 /* RedundaPingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* RedundaPingDelegate.swift */; };
-		OBJ_120 /* decodables.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* decodables.swift */; };
-		OBJ_121 /* globalvars.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* globalvars.swift */; };
-		OBJ_122 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* main.swift */; };
-		OBJ_124 /* Yams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Yams::Yams::Product" /* Yams.framework */; };
-		OBJ_125 /* CYaml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Yams::CYaml::Product" /* CYaml.framework */; };
-		OBJ_126 /* SwiftRedunda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "swiftredunda::SwiftRedunda::Product" /* SwiftRedunda.framework */; };
-		OBJ_127 /* SwiftChatSE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftChatSE::SwiftChatSE::Product" /* SwiftChatSE.framework */; };
-		OBJ_140 /* Constructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* Constructor.swift */; };
-		OBJ_141 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* Decoder.swift */; };
-		OBJ_142 /* Emitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* Emitter.swift */; };
-		OBJ_143 /* Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* Encoder.swift */; };
-		OBJ_144 /* Mark.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* Mark.swift */; };
-		OBJ_145 /* Node.Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* Node.Mapping.swift */; };
-		OBJ_146 /* Node.Scalar.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* Node.Scalar.swift */; };
-		OBJ_147 /* Node.Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* Node.Sequence.swift */; };
-		OBJ_148 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* Node.swift */; };
-		OBJ_149 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* Parser.swift */; };
-		OBJ_150 /* Representer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* Representer.swift */; };
-		OBJ_151 /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* Resolver.swift */; };
-		OBJ_152 /* String+Yams.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* String+Yams.swift */; };
-		OBJ_153 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* Tag.swift */; };
-		OBJ_154 /* YamlError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* YamlError.swift */; };
-		OBJ_156 /* CYaml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Yams::CYaml::Product" /* CYaml.framework */; };
-		OBJ_162 /* api.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* api.c */; };
-		OBJ_163 /* emitter.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* emitter.c */; };
-		OBJ_164 /* parser.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* parser.c */; };
-		OBJ_165 /* reader.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* reader.c */; };
-		OBJ_166 /* scanner.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* scanner.c */; };
-		OBJ_167 /* writer.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* writer.c */; };
-		OBJ_173 /* RedundaClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* RedundaClient.swift */; };
-		OBJ_174 /* RedundaPingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* RedundaPingResponse.swift */; };
-		OBJ_175 /* RedundaPingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* RedundaPingService.swift */; };
-		OBJ_181 /* ChatListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_57 /* ChatListener.swift */; };
-		OBJ_182 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* ChatMessage.swift */; };
-		OBJ_183 /* ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* ChatRoom.swift */; };
-		OBJ_184 /* ChatUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* ChatUser.swift */; };
-		OBJ_185 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* Client.swift */; };
-		OBJ_186 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* Command.swift */; };
-		OBJ_187 /* CommandCheckPrivileges.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* CommandCheckPrivileges.swift */; };
-		OBJ_188 /* CommandDeleteMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* CommandDeleteMessage.swift */; };
-		OBJ_189 /* CommandKill.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* CommandKill.swift */; };
-		OBJ_190 /* CommandListRunning.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* CommandListRunning.swift */; };
-		OBJ_191 /* CommandPrivilege.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* CommandPrivilege.swift */; };
-		OBJ_192 /* CommandSay.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* CommandSay.swift */; };
-		OBJ_193 /* CommandStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_69 /* CommandStop.swift */; };
-		OBJ_194 /* CommandUnprivilege.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* CommandUnprivilege.swift */; };
-		OBJ_195 /* DatabaseConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_71 /* DatabaseConnection.swift */; };
-		OBJ_196 /* DatabaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_72 /* DatabaseType.swift */; };
-		OBJ_197 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* ErrorHandler.swift */; };
-		OBJ_198 /* Levenshtein.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_74 /* Levenshtein.swift */; };
-		OBJ_199 /* NSStringHTMLDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* NSStringHTMLDecoding.swift */; };
-		OBJ_200 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* Row.swift */; };
-		OBJ_201 /* Utilites.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* Utilites.swift */; };
-		OBJ_202 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_78 /* WebSocket.swift */; };
-		OBJ_91 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_97 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* Package.swift */; };
+		OBJ_115 /* api.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* api.c */; };
+		OBJ_116 /* emitter.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* emitter.c */; };
+		OBJ_117 /* parser.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* parser.c */; };
+		OBJ_118 /* reader.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* reader.c */; };
+		OBJ_119 /* scanner.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* scanner.c */; };
+		OBJ_120 /* writer.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* writer.c */; };
+		OBJ_127 /* BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* BackgroundColor.swift */; };
+		OBJ_128 /* CodesParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* CodesParser.swift */; };
+		OBJ_129 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* Color.swift */; };
+		OBJ_130 /* ControlCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* ControlCode.swift */; };
+		OBJ_131 /* ModesExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* ModesExtractor.swift */; };
+		OBJ_132 /* OutputTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* OutputTarget.swift */; };
+		OBJ_133 /* Rainbow.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* Rainbow.swift */; };
+		OBJ_134 /* String+Rainbow.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* String+Rainbow.swift */; };
+		OBJ_135 /* StringGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* StringGenerator.swift */; };
+		OBJ_136 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* Style.swift */; };
+		OBJ_137 /* XcodeColorsSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* XcodeColorsSupport.swift */; };
+		OBJ_144 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* Package.swift */; };
+		OBJ_150 /* ChatListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_80 /* ChatListener.swift */; };
+		OBJ_151 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* ChatMessage.swift */; };
+		OBJ_152 /* ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_82 /* ChatRoom.swift */; };
+		OBJ_153 /* ChatUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_83 /* ChatUser.swift */; };
+		OBJ_154 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_84 /* Client.swift */; };
+		OBJ_155 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* Command.swift */; };
+		OBJ_156 /* CommandCheckPrivileges.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_86 /* CommandCheckPrivileges.swift */; };
+		OBJ_157 /* CommandDeleteMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_87 /* CommandDeleteMessage.swift */; };
+		OBJ_158 /* CommandKill.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_88 /* CommandKill.swift */; };
+		OBJ_159 /* CommandListRunning.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_89 /* CommandListRunning.swift */; };
+		OBJ_160 /* CommandPrivilege.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_90 /* CommandPrivilege.swift */; };
+		OBJ_161 /* CommandSay.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_91 /* CommandSay.swift */; };
+		OBJ_162 /* CommandStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_92 /* CommandStop.swift */; };
+		OBJ_163 /* CommandUnprivilege.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_93 /* CommandUnprivilege.swift */; };
+		OBJ_164 /* DatabaseConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_94 /* DatabaseConnection.swift */; };
+		OBJ_165 /* DatabaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_95 /* DatabaseType.swift */; };
+		OBJ_166 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_96 /* ErrorHandler.swift */; };
+		OBJ_167 /* Levenshtein.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_97 /* Levenshtein.swift */; };
+		OBJ_168 /* NSStringHTMLDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_98 /* NSStringHTMLDecoding.swift */; };
+		OBJ_169 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_99 /* Row.swift */; };
+		OBJ_170 /* Utilites.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_100 /* Utilites.swift */; };
+		OBJ_171 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_101 /* WebSocket.swift */; };
+		OBJ_178 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_102 /* Package.swift */; };
+		OBJ_184 /* RedundaClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* RedundaClient.swift */; };
+		OBJ_185 /* RedundaPingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* RedundaPingResponse.swift */; };
+		OBJ_186 /* RedundaPingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* RedundaPingService.swift */; };
+		OBJ_193 /* Constructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* Constructor.swift */; };
+		OBJ_194 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_57 /* Decoder.swift */; };
+		OBJ_195 /* Emitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* Emitter.swift */; };
+		OBJ_196 /* Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* Encoder.swift */; };
+		OBJ_197 /* Mark.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* Mark.swift */; };
+		OBJ_198 /* Node.Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* Node.Mapping.swift */; };
+		OBJ_199 /* Node.Scalar.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* Node.Scalar.swift */; };
+		OBJ_200 /* Node.Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* Node.Sequence.swift */; };
+		OBJ_201 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* Node.swift */; };
+		OBJ_202 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* Parser.swift */; };
+		OBJ_203 /* Representer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* Representer.swift */; };
+		OBJ_204 /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* Resolver.swift */; };
+		OBJ_205 /* String+Yams.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* String+Yams.swift */; };
+		OBJ_206 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_69 /* Tag.swift */; };
+		OBJ_207 /* YamlError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* YamlError.swift */; };
+		OBJ_209 /* CYaml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Yams::CYaml::Product" /* CYaml.framework */; };
+		OBJ_216 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_71 /* Package.swift */; };
+		OBJ_222 /* Alive.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Alive.swift */; };
+		OBJ_223 /* Checkuser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Checkuser.swift */; };
+		OBJ_224 /* Checkusers.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Checkusers.swift */; };
+		OBJ_225 /* Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Commands.swift */; };
+		OBJ_226 /* CommandsCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* CommandsCommand.swift */; };
+		OBJ_227 /* Creds.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Creds.swift */; };
+		OBJ_228 /* Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Delete.swift */; };
+		OBJ_229 /* FilterSocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* FilterSocks.swift */; };
+		OBJ_230 /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Help.swift */; };
+		OBJ_231 /* LogHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* LogHelper.swift */; };
+		OBJ_232 /* RedundaPingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* RedundaPingDelegate.swift */; };
+		OBJ_233 /* ReportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* ReportService.swift */; };
+		OBJ_234 /* SEAPIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* SEAPIHelper.swift */; };
+		OBJ_235 /* Say.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* Say.swift */; };
+		OBJ_236 /* decodables.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* decodables.swift */; };
+		OBJ_237 /* globalvars.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* globalvars.swift */; };
+		OBJ_238 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* main.swift */; };
+		OBJ_239 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* utils.swift */; };
+		OBJ_241 /* Rainbow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Rainbow::Rainbow::Product" /* Rainbow.framework */; };
+		OBJ_242 /* Yams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Yams::Yams::Product" /* Yams.framework */; };
+		OBJ_243 /* CYaml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Yams::CYaml::Product" /* CYaml.framework */; };
+		OBJ_244 /* SwiftRedunda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "swiftredunda::SwiftRedunda::Product" /* SwiftRedunda.framework */; };
+		OBJ_245 /* SwiftChatSE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftChatSE::SwiftChatSE::Product" /* SwiftChatSE.framework */; };
+		OBJ_256 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_262 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* Package.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E8696E3B201C836C0085A793 /* PBXContainerItemProxy */ = {
+		E8E5010320E86F0F00759B7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Yams::CYaml";
+			remoteInfo = CYaml;
+		};
+		E8E5010420E86F0F00759B7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Rainbow::Rainbow";
+			remoteInfo = Rainbow;
+		};
+		E8E5010520E86F0F00759B7E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Yams::Yams";
 			remoteInfo = Yams;
 		};
-		E8696E3C201C836C0085A793 /* PBXContainerItemProxy */ = {
+		E8E5010620E86F0F00759B7E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Yams::CYaml";
 			remoteInfo = CYaml;
 		};
-		E8696E3D201C836C0085A793 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Yams::CYaml";
-			remoteInfo = CYaml;
-		};
-		E8696E3E201C836C0085A793 /* PBXContainerItemProxy */ = {
+		E8E5010720E86F0F00759B7E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "swiftredunda::SwiftRedunda";
 			remoteInfo = SwiftRedunda;
 		};
-		E8696E3F201C836C0085A793 /* PBXContainerItemProxy */ = {
+		E8E5010820E86F0F00759B7E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -121,77 +141,90 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E804C28F20DDD47A0035DAB2 /* SEAPIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SEAPIHelper.swift; sourceTree = "<group>"; };
-		E806B604208C813E00D33A5A /* Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delete.swift; sourceTree = "<group>"; };
-		E836AA7D207F96BA00B26276 /* ReportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportService.swift; sourceTree = "<group>"; };
-		E8447F30207E2D6B00D45AC7 /* LogHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogHelper.swift; sourceTree = "<group>"; };
-		E861D38F205CD71E00FE4686 /* Help.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
-		E861D391205CE28800FE4686 /* CommandsCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandsCommand.swift; sourceTree = "<group>"; };
-		E8696E40201C83F00085A793 /* Say.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Say.swift; sourceTree = "<group>"; };
-		E8696E42201C87AA0085A793 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
-		E8CBDD52207CEB48002D4126 /* Checkuser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkuser.swift; sourceTree = "<group>"; };
-		E8F1C1012020A1960032F075 /* FilterSocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSocks.swift; sourceTree = "<group>"; };
-		OBJ_10 /* Checkusers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkusers.swift; sourceTree = "<group>"; };
-		OBJ_11 /* Commands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commands.swift; sourceTree = "<group>"; };
-		OBJ_12 /* Creds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creds.swift; sourceTree = "<group>"; };
-		OBJ_13 /* RedundaPingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedundaPingDelegate.swift; sourceTree = "<group>"; };
-		OBJ_14 /* decodables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodables.swift; sourceTree = "<group>"; };
-		OBJ_15 /* globalvars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = globalvars.swift; sourceTree = "<group>"; };
-		OBJ_16 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		OBJ_22 /* api.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = api.c; sourceTree = "<group>"; };
-		OBJ_23 /* emitter.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = emitter.c; sourceTree = "<group>"; };
-		OBJ_24 /* parser.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = parser.c; sourceTree = "<group>"; };
-		OBJ_25 /* reader.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = reader.c; sourceTree = "<group>"; };
-		OBJ_26 /* scanner.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = scanner.c; sourceTree = "<group>"; };
-		OBJ_27 /* writer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = writer.c; sourceTree = "<group>"; };
-		OBJ_29 /* CYaml.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYaml.h; sourceTree = "<group>"; };
-		OBJ_30 /* yaml.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = yaml.h; sourceTree = "<group>"; };
-		OBJ_31 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = /Users/hilarychlau/Desktop/xcode/sockite/sockite.xcodeproj/GeneratedModuleMap/CYaml/module.modulemap; sourceTree = "<group>"; };
-		OBJ_33 /* Constructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constructor.swift; sourceTree = "<group>"; };
-		OBJ_34 /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
-		OBJ_35 /* Emitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emitter.swift; sourceTree = "<group>"; };
-		OBJ_36 /* Encoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encoder.swift; sourceTree = "<group>"; };
-		OBJ_37 /* Mark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mark.swift; sourceTree = "<group>"; };
-		OBJ_38 /* Node.Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.Mapping.swift; sourceTree = "<group>"; };
-		OBJ_39 /* Node.Scalar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.Scalar.swift; sourceTree = "<group>"; };
-		OBJ_40 /* Node.Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.Sequence.swift; sourceTree = "<group>"; };
-		OBJ_41 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
-		OBJ_42 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
-		OBJ_43 /* Representer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Representer.swift; sourceTree = "<group>"; };
-		OBJ_44 /* Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
-		OBJ_45 /* String+Yams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Yams.swift"; sourceTree = "<group>"; };
-		OBJ_46 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
-		OBJ_47 /* YamlError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamlError.swift; sourceTree = "<group>"; };
-		OBJ_48 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/hilarychlau/Desktop/xcode/sockite/.build/checkouts/Yams.git-8068124914099325722/Package.swift"; sourceTree = "<group>"; };
-		OBJ_50 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/hilarychlau/Desktop/xcode/sockite/.build/checkouts/SwiftRedunda.git--7707713463606298708/Package.swift"; sourceTree = "<group>"; };
-		OBJ_52 /* RedundaClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedundaClient.swift; sourceTree = "<group>"; };
-		OBJ_53 /* RedundaPingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedundaPingResponse.swift; sourceTree = "<group>"; };
-		OBJ_54 /* RedundaPingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedundaPingService.swift; sourceTree = "<group>"; };
-		OBJ_57 /* ChatListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListener.swift; sourceTree = "<group>"; };
-		OBJ_58 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
-		OBJ_59 /* ChatRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
+		OBJ_10 /* Checkuser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkuser.swift; sourceTree = "<group>"; };
+		OBJ_100 /* Utilites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilites.swift; sourceTree = "<group>"; };
+		OBJ_101 /* WebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
+		OBJ_102 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/hilarychlau/Desktop/xcode/sockite/.build/checkouts/SwiftChatSE.git-382065480202907840/Package.swift"; sourceTree = "<group>"; };
+		OBJ_11 /* Checkusers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkusers.swift; sourceTree = "<group>"; };
+		OBJ_12 /* Commands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commands.swift; sourceTree = "<group>"; };
+		OBJ_13 /* CommandsCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandsCommand.swift; sourceTree = "<group>"; };
+		OBJ_14 /* Creds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creds.swift; sourceTree = "<group>"; };
+		OBJ_15 /* Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delete.swift; sourceTree = "<group>"; };
+		OBJ_16 /* FilterSocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSocks.swift; sourceTree = "<group>"; };
+		OBJ_17 /* Help.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
+		OBJ_18 /* LogHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogHelper.swift; sourceTree = "<group>"; };
+		OBJ_19 /* RedundaPingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedundaPingDelegate.swift; sourceTree = "<group>"; };
+		OBJ_20 /* ReportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportService.swift; sourceTree = "<group>"; };
+		OBJ_21 /* SEAPIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SEAPIHelper.swift; sourceTree = "<group>"; };
+		OBJ_22 /* Say.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Say.swift; sourceTree = "<group>"; };
+		OBJ_23 /* decodables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodables.swift; sourceTree = "<group>"; };
+		OBJ_24 /* globalvars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = globalvars.swift; sourceTree = "<group>"; };
+		OBJ_25 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		OBJ_26 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
+		OBJ_30 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/hilarychlau/Desktop/xcode/sockite/.build/checkouts/Rainbow-4833422609927903952/Package.swift"; sourceTree = "<group>"; };
+		OBJ_31 /* BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColor.swift; sourceTree = "<group>"; };
+		OBJ_32 /* CodesParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodesParser.swift; sourceTree = "<group>"; };
+		OBJ_33 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		OBJ_34 /* ControlCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCode.swift; sourceTree = "<group>"; };
+		OBJ_35 /* ModesExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModesExtractor.swift; sourceTree = "<group>"; };
+		OBJ_36 /* OutputTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputTarget.swift; sourceTree = "<group>"; };
+		OBJ_37 /* Rainbow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rainbow.swift; sourceTree = "<group>"; };
+		OBJ_38 /* String+Rainbow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Rainbow.swift"; sourceTree = "<group>"; };
+		OBJ_39 /* StringGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringGenerator.swift; sourceTree = "<group>"; };
+		OBJ_40 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		OBJ_41 /* XcodeColorsSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeColorsSupport.swift; sourceTree = "<group>"; };
+		OBJ_45 /* api.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = api.c; sourceTree = "<group>"; };
+		OBJ_46 /* emitter.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = emitter.c; sourceTree = "<group>"; };
+		OBJ_47 /* parser.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = parser.c; sourceTree = "<group>"; };
+		OBJ_48 /* reader.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = reader.c; sourceTree = "<group>"; };
+		OBJ_49 /* scanner.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = scanner.c; sourceTree = "<group>"; };
+		OBJ_50 /* writer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = writer.c; sourceTree = "<group>"; };
+		OBJ_52 /* CYaml.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYaml.h; sourceTree = "<group>"; };
+		OBJ_53 /* yaml.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = yaml.h; sourceTree = "<group>"; };
+		OBJ_54 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = /Users/hilarychlau/Desktop/xcode/sockite/sockite.xcodeproj/GeneratedModuleMap/CYaml/module.modulemap; sourceTree = "<group>"; };
+		OBJ_56 /* Constructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constructor.swift; sourceTree = "<group>"; };
+		OBJ_57 /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
+		OBJ_58 /* Emitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emitter.swift; sourceTree = "<group>"; };
+		OBJ_59 /* Encoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encoder.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_60 /* ChatUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUser.swift; sourceTree = "<group>"; };
-		OBJ_61 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
-		OBJ_62 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
-		OBJ_63 /* CommandCheckPrivileges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandCheckPrivileges.swift; sourceTree = "<group>"; };
-		OBJ_64 /* CommandDeleteMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandDeleteMessage.swift; sourceTree = "<group>"; };
-		OBJ_65 /* CommandKill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandKill.swift; sourceTree = "<group>"; };
-		OBJ_66 /* CommandListRunning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandListRunning.swift; sourceTree = "<group>"; };
-		OBJ_67 /* CommandPrivilege.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandPrivilege.swift; sourceTree = "<group>"; };
-		OBJ_68 /* CommandSay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandSay.swift; sourceTree = "<group>"; };
-		OBJ_69 /* CommandStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandStop.swift; sourceTree = "<group>"; };
-		OBJ_70 /* CommandUnprivilege.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandUnprivilege.swift; sourceTree = "<group>"; };
-		OBJ_71 /* DatabaseConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseConnection.swift; sourceTree = "<group>"; };
-		OBJ_72 /* DatabaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseType.swift; sourceTree = "<group>"; };
-		OBJ_73 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
-		OBJ_74 /* Levenshtein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Levenshtein.swift; sourceTree = "<group>"; };
-		OBJ_75 /* NSStringHTMLDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSStringHTMLDecoding.swift; sourceTree = "<group>"; };
-		OBJ_76 /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
-		OBJ_77 /* Utilites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilites.swift; sourceTree = "<group>"; };
-		OBJ_78 /* WebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
-		OBJ_79 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/hilarychlau/Desktop/xcode/sockite/.build/checkouts/SwiftChatSE.git-382065480202907840/Package.swift"; sourceTree = "<group>"; };
+		OBJ_60 /* Mark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mark.swift; sourceTree = "<group>"; };
+		OBJ_61 /* Node.Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.Mapping.swift; sourceTree = "<group>"; };
+		OBJ_62 /* Node.Scalar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.Scalar.swift; sourceTree = "<group>"; };
+		OBJ_63 /* Node.Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.Sequence.swift; sourceTree = "<group>"; };
+		OBJ_64 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		OBJ_65 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		OBJ_66 /* Representer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Representer.swift; sourceTree = "<group>"; };
+		OBJ_67 /* Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
+		OBJ_68 /* String+Yams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Yams.swift"; sourceTree = "<group>"; };
+		OBJ_69 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		OBJ_70 /* YamlError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamlError.swift; sourceTree = "<group>"; };
+		OBJ_71 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/hilarychlau/Desktop/xcode/sockite/.build/checkouts/Yams.git-8068124914099325722/Package.swift"; sourceTree = "<group>"; };
+		OBJ_73 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/hilarychlau/Desktop/xcode/sockite/.build/checkouts/SwiftRedunda.git--7707713463606298708/Package.swift"; sourceTree = "<group>"; };
+		OBJ_75 /* RedundaClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedundaClient.swift; sourceTree = "<group>"; };
+		OBJ_76 /* RedundaPingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedundaPingResponse.swift; sourceTree = "<group>"; };
+		OBJ_77 /* RedundaPingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedundaPingService.swift; sourceTree = "<group>"; };
+		OBJ_80 /* ChatListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListener.swift; sourceTree = "<group>"; };
+		OBJ_81 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		OBJ_82 /* ChatRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
+		OBJ_83 /* ChatUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUser.swift; sourceTree = "<group>"; };
+		OBJ_84 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		OBJ_85 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		OBJ_86 /* CommandCheckPrivileges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandCheckPrivileges.swift; sourceTree = "<group>"; };
+		OBJ_87 /* CommandDeleteMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandDeleteMessage.swift; sourceTree = "<group>"; };
+		OBJ_88 /* CommandKill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandKill.swift; sourceTree = "<group>"; };
+		OBJ_89 /* CommandListRunning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandListRunning.swift; sourceTree = "<group>"; };
 		OBJ_9 /* Alive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alive.swift; sourceTree = "<group>"; };
+		OBJ_90 /* CommandPrivilege.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandPrivilege.swift; sourceTree = "<group>"; };
+		OBJ_91 /* CommandSay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandSay.swift; sourceTree = "<group>"; };
+		OBJ_92 /* CommandStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandStop.swift; sourceTree = "<group>"; };
+		OBJ_93 /* CommandUnprivilege.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandUnprivilege.swift; sourceTree = "<group>"; };
+		OBJ_94 /* DatabaseConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseConnection.swift; sourceTree = "<group>"; };
+		OBJ_95 /* DatabaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseType.swift; sourceTree = "<group>"; };
+		OBJ_96 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		OBJ_97 /* Levenshtein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Levenshtein.swift; sourceTree = "<group>"; };
+		OBJ_98 /* NSStringHTMLDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSStringHTMLDecoding.swift; sourceTree = "<group>"; };
+		OBJ_99 /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
+		"Rainbow::Rainbow::Product" /* Rainbow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Rainbow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"SwiftChatSE::SwiftChatSE::Product" /* SwiftChatSE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftChatSE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Yams::CYaml::Product" /* CYaml.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CYaml.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Yams::Yams::Product" /* Yams.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Yams.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,200 +233,184 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_123 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_124 /* Yams.framework in Frameworks */,
-				OBJ_125 /* CYaml.framework in Frameworks */,
-				OBJ_126 /* SwiftRedunda.framework in Frameworks */,
-				OBJ_127 /* SwiftChatSE.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_155 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_156 /* CYaml.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_168 /* Frameworks */ = {
+		OBJ_121 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_176 /* Frameworks */ = {
+		OBJ_138 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_203 /* Frameworks */ = {
+		OBJ_172 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_187 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_208 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_209 /* CYaml.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_240 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_241 /* Rainbow.framework in Frameworks */,
+				OBJ_242 /* Yams.framework in Frameworks */,
+				OBJ_243 /* CYaml.framework in Frameworks */,
+				OBJ_244 /* SwiftRedunda.framework in Frameworks */,
+				OBJ_245 /* SwiftChatSE.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		OBJ_17 /* Tests */ = {
+		OBJ_103 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"sockite::sockite::Product" /* sockite */,
+				"Yams::Yams::Product" /* Yams.framework */,
+				"Yams::CYaml::Product" /* CYaml.framework */,
+				"Rainbow::Rainbow::Product" /* Rainbow.framework */,
+				"swiftredunda::SwiftRedunda::Product" /* SwiftRedunda.framework */,
+				"SwiftChatSE::SwiftChatSE::Product" /* SwiftChatSE.framework */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_27 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Tests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_18 /* Dependencies */ = {
+		OBJ_28 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_19 /* Yams 0.5.0 */,
-				OBJ_49 /* swiftredunda 0.1.3 */,
-				OBJ_55 /* SwiftChatSE 5.0.4 */,
+				OBJ_29 /* Rainbow 2.1.0 */,
+				OBJ_42 /* Yams 0.5.0 */,
+				OBJ_72 /* swiftredunda 0.1.4 */,
+				OBJ_78 /* SwiftChatSE 5.0.6 */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
 		};
-		OBJ_19 /* Yams 0.5.0 */ = {
+		OBJ_29 /* Rainbow 2.1.0 */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_20 /* CYaml */,
-				OBJ_32 /* Yams */,
-				OBJ_48 /* Package.swift */,
+				OBJ_30 /* Package.swift */,
+				OBJ_31 /* BackgroundColor.swift */,
+				OBJ_32 /* CodesParser.swift */,
+				OBJ_33 /* Color.swift */,
+				OBJ_34 /* ControlCode.swift */,
+				OBJ_35 /* ModesExtractor.swift */,
+				OBJ_36 /* OutputTarget.swift */,
+				OBJ_37 /* Rainbow.swift */,
+				OBJ_38 /* String+Rainbow.swift */,
+				OBJ_39 /* StringGenerator.swift */,
+				OBJ_40 /* Style.swift */,
+				OBJ_41 /* XcodeColorsSupport.swift */,
+			);
+			name = "Rainbow 2.1.0";
+			path = ".build/checkouts/Rainbow-4833422609927903952/Sources";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_42 /* Yams 0.5.0 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_43 /* CYaml */,
+				OBJ_55 /* Yams */,
+				OBJ_71 /* Package.swift */,
 			);
 			name = "Yams 0.5.0";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_20 /* CYaml */ = {
+		OBJ_43 /* CYaml */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_21 /* src */,
-				OBJ_28 /* include */,
+				OBJ_44 /* src */,
+				OBJ_51 /* include */,
 			);
 			name = CYaml;
 			path = ".build/checkouts/Yams.git-8068124914099325722/Sources/CYaml";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_21 /* src */ = {
+		OBJ_44 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_22 /* api.c */,
-				OBJ_23 /* emitter.c */,
-				OBJ_24 /* parser.c */,
-				OBJ_25 /* reader.c */,
-				OBJ_26 /* scanner.c */,
-				OBJ_27 /* writer.c */,
+				OBJ_45 /* api.c */,
+				OBJ_46 /* emitter.c */,
+				OBJ_47 /* parser.c */,
+				OBJ_48 /* reader.c */,
+				OBJ_49 /* scanner.c */,
+				OBJ_50 /* writer.c */,
 			);
 			path = src;
 			sourceTree = "<group>";
 		};
-		OBJ_28 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_29 /* CYaml.h */,
-				OBJ_30 /* yaml.h */,
-				OBJ_31 /* module.modulemap */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		OBJ_32 /* Yams */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_33 /* Constructor.swift */,
-				OBJ_34 /* Decoder.swift */,
-				OBJ_35 /* Emitter.swift */,
-				OBJ_36 /* Encoder.swift */,
-				OBJ_37 /* Mark.swift */,
-				OBJ_38 /* Node.Mapping.swift */,
-				OBJ_39 /* Node.Scalar.swift */,
-				OBJ_40 /* Node.Sequence.swift */,
-				OBJ_41 /* Node.swift */,
-				OBJ_42 /* Parser.swift */,
-				OBJ_43 /* Representer.swift */,
-				OBJ_44 /* Resolver.swift */,
-				OBJ_45 /* String+Yams.swift */,
-				OBJ_46 /* Tag.swift */,
-				OBJ_47 /* YamlError.swift */,
-			);
-			name = Yams;
-			path = ".build/checkouts/Yams.git-8068124914099325722/Sources/Yams";
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_49 /* swiftredunda 0.1.3 */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_50 /* Package.swift */,
-				OBJ_51 /* swiftredunda */,
-			);
-			name = "swiftredunda 0.1.3";
-			path = ".build/checkouts/SwiftRedunda.git--7707713463606298708/Sources";
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_5 = {
+		OBJ_5 /*  */ = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
-				OBJ_17 /* Tests */,
-				OBJ_18 /* Dependencies */,
-				OBJ_80 /* Products */,
+				OBJ_27 /* Tests */,
+				OBJ_28 /* Dependencies */,
+				OBJ_103 /* Products */,
 			);
+			name = "";
 			sourceTree = "<group>";
 		};
-		OBJ_51 /* swiftredunda */ = {
+		OBJ_51 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_52 /* RedundaClient.swift */,
-				OBJ_53 /* RedundaPingResponse.swift */,
-				OBJ_54 /* RedundaPingService.swift */,
+				OBJ_52 /* CYaml.h */,
+				OBJ_53 /* yaml.h */,
+				OBJ_54 /* module.modulemap */,
 			);
-			path = swiftredunda;
+			path = include;
 			sourceTree = "<group>";
 		};
-		OBJ_55 /* SwiftChatSE 5.0.4 */ = {
+		OBJ_55 /* Yams */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_56 /* SwiftChatSE */,
-				OBJ_79 /* Package.swift */,
+				OBJ_56 /* Constructor.swift */,
+				OBJ_57 /* Decoder.swift */,
+				OBJ_58 /* Emitter.swift */,
+				OBJ_59 /* Encoder.swift */,
+				OBJ_60 /* Mark.swift */,
+				OBJ_61 /* Node.Mapping.swift */,
+				OBJ_62 /* Node.Scalar.swift */,
+				OBJ_63 /* Node.Sequence.swift */,
+				OBJ_64 /* Node.swift */,
+				OBJ_65 /* Parser.swift */,
+				OBJ_66 /* Representer.swift */,
+				OBJ_67 /* Resolver.swift */,
+				OBJ_68 /* String+Yams.swift */,
+				OBJ_69 /* Tag.swift */,
+				OBJ_70 /* YamlError.swift */,
 			);
-			name = "SwiftChatSE 5.0.4";
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_56 /* SwiftChatSE */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_57 /* ChatListener.swift */,
-				OBJ_58 /* ChatMessage.swift */,
-				OBJ_59 /* ChatRoom.swift */,
-				OBJ_60 /* ChatUser.swift */,
-				OBJ_61 /* Client.swift */,
-				OBJ_62 /* Command.swift */,
-				OBJ_63 /* CommandCheckPrivileges.swift */,
-				OBJ_64 /* CommandDeleteMessage.swift */,
-				OBJ_65 /* CommandKill.swift */,
-				OBJ_66 /* CommandListRunning.swift */,
-				OBJ_67 /* CommandPrivilege.swift */,
-				OBJ_68 /* CommandSay.swift */,
-				OBJ_69 /* CommandStop.swift */,
-				OBJ_70 /* CommandUnprivilege.swift */,
-				OBJ_71 /* DatabaseConnection.swift */,
-				OBJ_72 /* DatabaseType.swift */,
-				OBJ_73 /* ErrorHandler.swift */,
-				OBJ_74 /* Levenshtein.swift */,
-				OBJ_75 /* NSStringHTMLDecoding.swift */,
-				OBJ_76 /* Row.swift */,
-				OBJ_77 /* Utilites.swift */,
-				OBJ_78 /* WebSocket.swift */,
-			);
-			name = SwiftChatSE;
-			path = ".build/checkouts/SwiftChatSE.git-382065480202907840/Sources/SwiftChatSE";
+			name = Yams;
+			path = ".build/checkouts/Yams.git-8068124914099325722/Sources/Yams";
 			sourceTree = SOURCE_ROOT;
 		};
 		OBJ_7 /* Sources */ = {
@@ -404,53 +421,130 @@
 			name = Sources;
 			sourceTree = SOURCE_ROOT;
 		};
+		OBJ_72 /* swiftredunda 0.1.4 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_73 /* Package.swift */,
+				OBJ_74 /* swiftredunda */,
+			);
+			name = "swiftredunda 0.1.4";
+			path = ".build/checkouts/SwiftRedunda.git--7707713463606298708/Sources";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_74 /* swiftredunda */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_75 /* RedundaClient.swift */,
+				OBJ_76 /* RedundaPingResponse.swift */,
+				OBJ_77 /* RedundaPingService.swift */,
+			);
+			path = swiftredunda;
+			sourceTree = "<group>";
+		};
+		OBJ_78 /* SwiftChatSE 5.0.6 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_79 /* SwiftChatSE */,
+				OBJ_102 /* Package.swift */,
+			);
+			name = "SwiftChatSE 5.0.6";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_79 /* SwiftChatSE */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_80 /* ChatListener.swift */,
+				OBJ_81 /* ChatMessage.swift */,
+				OBJ_82 /* ChatRoom.swift */,
+				OBJ_83 /* ChatUser.swift */,
+				OBJ_84 /* Client.swift */,
+				OBJ_85 /* Command.swift */,
+				OBJ_86 /* CommandCheckPrivileges.swift */,
+				OBJ_87 /* CommandDeleteMessage.swift */,
+				OBJ_88 /* CommandKill.swift */,
+				OBJ_89 /* CommandListRunning.swift */,
+				OBJ_90 /* CommandPrivilege.swift */,
+				OBJ_91 /* CommandSay.swift */,
+				OBJ_92 /* CommandStop.swift */,
+				OBJ_93 /* CommandUnprivilege.swift */,
+				OBJ_94 /* DatabaseConnection.swift */,
+				OBJ_95 /* DatabaseType.swift */,
+				OBJ_96 /* ErrorHandler.swift */,
+				OBJ_97 /* Levenshtein.swift */,
+				OBJ_98 /* NSStringHTMLDecoding.swift */,
+				OBJ_99 /* Row.swift */,
+				OBJ_100 /* Utilites.swift */,
+				OBJ_101 /* WebSocket.swift */,
+			);
+			name = SwiftChatSE;
+			path = ".build/checkouts/SwiftChatSE.git-382065480202907840/Sources/SwiftChatSE";
+			sourceTree = SOURCE_ROOT;
+		};
 		OBJ_8 /* sockite */ = {
 			isa = PBXGroup;
 			children = (
 				OBJ_9 /* Alive.swift */,
-				E861D391205CE28800FE4686 /* CommandsCommand.swift */,
-				E861D38F205CD71E00FE4686 /* Help.swift */,
-				E8F1C1012020A1960032F075 /* FilterSocks.swift */,
-				E8447F30207E2D6B00D45AC7 /* LogHelper.swift */,
-				E8696E40201C83F00085A793 /* Say.swift */,
-				E8696E42201C87AA0085A793 /* utils.swift */,
-				OBJ_10 /* Checkusers.swift */,
-				E806B604208C813E00D33A5A /* Delete.swift */,
-				E836AA7D207F96BA00B26276 /* ReportService.swift */,
-				E804C28F20DDD47A0035DAB2 /* SEAPIHelper.swift */,
-				E8CBDD52207CEB48002D4126 /* Checkuser.swift */,
-				OBJ_11 /* Commands.swift */,
-				OBJ_12 /* Creds.swift */,
-				OBJ_13 /* RedundaPingDelegate.swift */,
-				OBJ_14 /* decodables.swift */,
-				OBJ_15 /* globalvars.swift */,
-				OBJ_16 /* main.swift */,
+				OBJ_10 /* Checkuser.swift */,
+				OBJ_11 /* Checkusers.swift */,
+				OBJ_12 /* Commands.swift */,
+				OBJ_13 /* CommandsCommand.swift */,
+				OBJ_14 /* Creds.swift */,
+				OBJ_15 /* Delete.swift */,
+				OBJ_16 /* FilterSocks.swift */,
+				OBJ_17 /* Help.swift */,
+				OBJ_18 /* LogHelper.swift */,
+				OBJ_19 /* RedundaPingDelegate.swift */,
+				OBJ_20 /* ReportService.swift */,
+				OBJ_21 /* SEAPIHelper.swift */,
+				OBJ_22 /* Say.swift */,
+				OBJ_23 /* decodables.swift */,
+				OBJ_24 /* globalvars.swift */,
+				OBJ_25 /* main.swift */,
+				OBJ_26 /* utils.swift */,
 			);
 			name = sockite;
 			path = Sources/sockite;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_80 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				"sockite::sockite::Product" /* sockite */,
-				"Yams::Yams::Product" /* Yams.framework */,
-				"Yams::CYaml::Product" /* CYaml.framework */,
-				"swiftredunda::SwiftRedunda::Product" /* SwiftRedunda.framework */,
-				"SwiftChatSE::SwiftChatSE::Product" /* SwiftChatSE.framework */,
-			);
-			name = Products;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		"Rainbow::Rainbow" /* Rainbow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_123 /* Build configuration list for PBXNativeTarget "Rainbow" */;
+			buildPhases = (
+				OBJ_126 /* Sources */,
+				OBJ_138 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rainbow;
+			productName = Rainbow;
+			productReference = "Rainbow::Rainbow::Product" /* Rainbow.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Rainbow::SwiftPMPackageDescription" /* RainbowPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_140 /* Build configuration list for PBXNativeTarget "RainbowPackageDescription" */;
+			buildPhases = (
+				OBJ_143 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RainbowPackageDescription;
+			productName = RainbowPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
 		"SwiftChatSE::SwiftChatSE" /* SwiftChatSE */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_177 /* Build configuration list for PBXNativeTarget "SwiftChatSE" */;
+			buildConfigurationList = OBJ_146 /* Build configuration list for PBXNativeTarget "SwiftChatSE" */;
 			buildPhases = (
-				OBJ_180 /* Sources */,
-				OBJ_203 /* Frameworks */,
+				OBJ_149 /* Sources */,
+				OBJ_172 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -463,9 +557,9 @@
 		};
 		"SwiftChatSE::SwiftPMPackageDescription" /* SwiftChatSEPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_105 /* Build configuration list for PBXNativeTarget "SwiftChatSEPackageDescription" */;
+			buildConfigurationList = OBJ_174 /* Build configuration list for PBXNativeTarget "SwiftChatSEPackageDescription" */;
 			buildPhases = (
-				OBJ_108 /* Sources */,
+				OBJ_177 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -477,10 +571,10 @@
 		};
 		"Yams::CYaml" /* CYaml */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_158 /* Build configuration list for PBXNativeTarget "CYaml" */;
+			buildConfigurationList = OBJ_111 /* Build configuration list for PBXNativeTarget "CYaml" */;
 			buildPhases = (
-				OBJ_161 /* Sources */,
-				OBJ_168 /* Frameworks */,
+				OBJ_114 /* Sources */,
+				OBJ_121 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -493,9 +587,9 @@
 		};
 		"Yams::SwiftPMPackageDescription" /* YamsPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_93 /* Build configuration list for PBXNativeTarget "YamsPackageDescription" */;
+			buildConfigurationList = OBJ_212 /* Build configuration list for PBXNativeTarget "YamsPackageDescription" */;
 			buildPhases = (
-				OBJ_96 /* Sources */,
+				OBJ_215 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -507,15 +601,15 @@
 		};
 		"Yams::Yams" /* Yams */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_136 /* Build configuration list for PBXNativeTarget "Yams" */;
+			buildConfigurationList = OBJ_189 /* Build configuration list for PBXNativeTarget "Yams" */;
 			buildPhases = (
-				OBJ_139 /* Sources */,
-				OBJ_155 /* Frameworks */,
+				OBJ_192 /* Sources */,
+				OBJ_208 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_157 /* PBXTargetDependency */,
+				OBJ_210 /* PBXTargetDependency */,
 			);
 			name = Yams;
 			productName = Yams;
@@ -524,9 +618,9 @@
 		};
 		"sockite::SwiftPMPackageDescription" /* sockitePackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_87 /* Build configuration list for PBXNativeTarget "sockitePackageDescription" */;
+			buildConfigurationList = OBJ_252 /* Build configuration list for PBXNativeTarget "sockitePackageDescription" */;
 			buildPhases = (
-				OBJ_90 /* Sources */,
+				OBJ_255 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -538,18 +632,19 @@
 		};
 		"sockite::sockite" /* sockite */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_111 /* Build configuration list for PBXNativeTarget "sockite" */;
+			buildConfigurationList = OBJ_218 /* Build configuration list for PBXNativeTarget "sockite" */;
 			buildPhases = (
-				OBJ_114 /* Sources */,
-				OBJ_123 /* Frameworks */,
+				OBJ_221 /* Sources */,
+				OBJ_240 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_128 /* PBXTargetDependency */,
-				OBJ_130 /* PBXTargetDependency */,
-				OBJ_132 /* PBXTargetDependency */,
-				OBJ_134 /* PBXTargetDependency */,
+				OBJ_246 /* PBXTargetDependency */,
+				OBJ_247 /* PBXTargetDependency */,
+				OBJ_248 /* PBXTargetDependency */,
+				OBJ_249 /* PBXTargetDependency */,
+				OBJ_250 /* PBXTargetDependency */,
 			);
 			name = sockite;
 			productName = sockite;
@@ -558,9 +653,9 @@
 		};
 		"swiftredunda::SwiftPMPackageDescription" /* swiftredundaPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_99 /* Build configuration list for PBXNativeTarget "swiftredundaPackageDescription" */;
+			buildConfigurationList = OBJ_258 /* Build configuration list for PBXNativeTarget "swiftredundaPackageDescription" */;
 			buildPhases = (
-				OBJ_102 /* Sources */,
+				OBJ_261 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -572,10 +667,10 @@
 		};
 		"swiftredunda::SwiftRedunda" /* SwiftRedunda */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_169 /* Build configuration list for PBXNativeTarget "SwiftRedunda" */;
+			buildConfigurationList = OBJ_180 /* Build configuration list for PBXNativeTarget "SwiftRedunda" */;
 			buildPhases = (
-				OBJ_172 /* Sources */,
-				OBJ_176 /* Frameworks */,
+				OBJ_183 /* Sources */,
+				OBJ_187 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -601,226 +696,225 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5;
-			productRefGroup = OBJ_80 /* Products */;
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_103 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				"sockite::SwiftPMPackageDescription" /* sockitePackageDescription */,
-				"Yams::SwiftPMPackageDescription" /* YamsPackageDescription */,
-				"swiftredunda::SwiftPMPackageDescription" /* swiftredundaPackageDescription */,
-				"SwiftChatSE::SwiftPMPackageDescription" /* SwiftChatSEPackageDescription */,
-				"sockite::sockite" /* sockite */,
-				"Yams::Yams" /* Yams */,
 				"Yams::CYaml" /* CYaml */,
-				"swiftredunda::SwiftRedunda" /* SwiftRedunda */,
+				"Rainbow::Rainbow" /* Rainbow */,
+				"Rainbow::SwiftPMPackageDescription" /* RainbowPackageDescription */,
 				"SwiftChatSE::SwiftChatSE" /* SwiftChatSE */,
+				"SwiftChatSE::SwiftPMPackageDescription" /* SwiftChatSEPackageDescription */,
+				"swiftredunda::SwiftRedunda" /* SwiftRedunda */,
+				"Yams::Yams" /* Yams */,
+				"Yams::SwiftPMPackageDescription" /* YamsPackageDescription */,
+				"sockite::sockite" /* sockite */,
+				"sockite::SwiftPMPackageDescription" /* sockitePackageDescription */,
+				"swiftredunda::SwiftPMPackageDescription" /* swiftredundaPackageDescription */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_102 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_103 /* Package.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_108 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_109 /* Package.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		OBJ_114 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_115 /* Alive.swift in Sources */,
-				OBJ_116 /* Checkusers.swift in Sources */,
-				OBJ_117 /* Commands.swift in Sources */,
-				OBJ_118 /* Creds.swift in Sources */,
-				OBJ_119 /* RedundaPingDelegate.swift in Sources */,
-				OBJ_120 /* decodables.swift in Sources */,
-				OBJ_121 /* globalvars.swift in Sources */,
-				OBJ_122 /* main.swift in Sources */,
+				OBJ_115 /* api.c in Sources */,
+				OBJ_116 /* emitter.c in Sources */,
+				OBJ_117 /* parser.c in Sources */,
+				OBJ_118 /* reader.c in Sources */,
+				OBJ_119 /* scanner.c in Sources */,
+				OBJ_120 /* writer.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_139 /* Sources */ = {
+		OBJ_126 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_140 /* Constructor.swift in Sources */,
-				OBJ_141 /* Decoder.swift in Sources */,
-				OBJ_142 /* Emitter.swift in Sources */,
-				OBJ_143 /* Encoder.swift in Sources */,
-				OBJ_144 /* Mark.swift in Sources */,
-				OBJ_145 /* Node.Mapping.swift in Sources */,
-				OBJ_146 /* Node.Scalar.swift in Sources */,
-				OBJ_147 /* Node.Sequence.swift in Sources */,
-				OBJ_148 /* Node.swift in Sources */,
-				OBJ_149 /* Parser.swift in Sources */,
-				OBJ_150 /* Representer.swift in Sources */,
-				OBJ_151 /* Resolver.swift in Sources */,
-				OBJ_152 /* String+Yams.swift in Sources */,
-				OBJ_153 /* Tag.swift in Sources */,
-				OBJ_154 /* YamlError.swift in Sources */,
+				OBJ_127 /* BackgroundColor.swift in Sources */,
+				OBJ_128 /* CodesParser.swift in Sources */,
+				OBJ_129 /* Color.swift in Sources */,
+				OBJ_130 /* ControlCode.swift in Sources */,
+				OBJ_131 /* ModesExtractor.swift in Sources */,
+				OBJ_132 /* OutputTarget.swift in Sources */,
+				OBJ_133 /* Rainbow.swift in Sources */,
+				OBJ_134 /* String+Rainbow.swift in Sources */,
+				OBJ_135 /* StringGenerator.swift in Sources */,
+				OBJ_136 /* Style.swift in Sources */,
+				OBJ_137 /* XcodeColorsSupport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_161 /* Sources */ = {
+		OBJ_143 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_162 /* api.c in Sources */,
-				OBJ_163 /* emitter.c in Sources */,
-				OBJ_164 /* parser.c in Sources */,
-				OBJ_165 /* reader.c in Sources */,
-				OBJ_166 /* scanner.c in Sources */,
-				OBJ_167 /* writer.c in Sources */,
+				OBJ_144 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_172 /* Sources */ = {
+		OBJ_149 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_173 /* RedundaClient.swift in Sources */,
-				OBJ_174 /* RedundaPingResponse.swift in Sources */,
-				OBJ_175 /* RedundaPingService.swift in Sources */,
+				OBJ_150 /* ChatListener.swift in Sources */,
+				OBJ_151 /* ChatMessage.swift in Sources */,
+				OBJ_152 /* ChatRoom.swift in Sources */,
+				OBJ_153 /* ChatUser.swift in Sources */,
+				OBJ_154 /* Client.swift in Sources */,
+				OBJ_155 /* Command.swift in Sources */,
+				OBJ_156 /* CommandCheckPrivileges.swift in Sources */,
+				OBJ_157 /* CommandDeleteMessage.swift in Sources */,
+				OBJ_158 /* CommandKill.swift in Sources */,
+				OBJ_159 /* CommandListRunning.swift in Sources */,
+				OBJ_160 /* CommandPrivilege.swift in Sources */,
+				OBJ_161 /* CommandSay.swift in Sources */,
+				OBJ_162 /* CommandStop.swift in Sources */,
+				OBJ_163 /* CommandUnprivilege.swift in Sources */,
+				OBJ_164 /* DatabaseConnection.swift in Sources */,
+				OBJ_165 /* DatabaseType.swift in Sources */,
+				OBJ_166 /* ErrorHandler.swift in Sources */,
+				OBJ_167 /* Levenshtein.swift in Sources */,
+				OBJ_168 /* NSStringHTMLDecoding.swift in Sources */,
+				OBJ_169 /* Row.swift in Sources */,
+				OBJ_170 /* Utilites.swift in Sources */,
+				OBJ_171 /* WebSocket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_180 /* Sources */ = {
+		OBJ_177 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_181 /* ChatListener.swift in Sources */,
-				OBJ_182 /* ChatMessage.swift in Sources */,
-				OBJ_183 /* ChatRoom.swift in Sources */,
-				OBJ_184 /* ChatUser.swift in Sources */,
-				OBJ_185 /* Client.swift in Sources */,
-				OBJ_186 /* Command.swift in Sources */,
-				OBJ_187 /* CommandCheckPrivileges.swift in Sources */,
-				OBJ_188 /* CommandDeleteMessage.swift in Sources */,
-				OBJ_189 /* CommandKill.swift in Sources */,
-				OBJ_190 /* CommandListRunning.swift in Sources */,
-				OBJ_191 /* CommandPrivilege.swift in Sources */,
-				OBJ_192 /* CommandSay.swift in Sources */,
-				OBJ_193 /* CommandStop.swift in Sources */,
-				OBJ_194 /* CommandUnprivilege.swift in Sources */,
-				OBJ_195 /* DatabaseConnection.swift in Sources */,
-				OBJ_196 /* DatabaseType.swift in Sources */,
-				OBJ_197 /* ErrorHandler.swift in Sources */,
-				OBJ_198 /* Levenshtein.swift in Sources */,
-				OBJ_199 /* NSStringHTMLDecoding.swift in Sources */,
-				OBJ_200 /* Row.swift in Sources */,
-				OBJ_201 /* Utilites.swift in Sources */,
-				OBJ_202 /* WebSocket.swift in Sources */,
+				OBJ_178 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_90 /* Sources */ = {
+		OBJ_183 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				E804C29020DDD47A0035DAB2 /* SEAPIHelper.swift in Sources */,
-				E806B605208C813E00D33A5A /* Delete.swift in Sources */,
-				E861D390205CD71E00FE4686 /* Help.swift in Sources */,
-				E8696E43201C87AA0085A793 /* utils.swift in Sources */,
-				E8F1C1022020A1960032F075 /* FilterSocks.swift in Sources */,
-				E861D392205CE28800FE4686 /* CommandsCommand.swift in Sources */,
-				E8447F31207E2D6B00D45AC7 /* LogHelper.swift in Sources */,
-				OBJ_91 /* Package.swift in Sources */,
-				E836AA7E207F96BA00B26276 /* ReportService.swift in Sources */,
-				E8696E41201C83F00085A793 /* Say.swift in Sources */,
-				E8CBDD53207CEB48002D4126 /* Checkuser.swift in Sources */,
+				OBJ_184 /* RedundaClient.swift in Sources */,
+				OBJ_185 /* RedundaPingResponse.swift in Sources */,
+				OBJ_186 /* RedundaPingService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_96 /* Sources */ = {
+		OBJ_192 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_97 /* Package.swift in Sources */,
+				OBJ_193 /* Constructor.swift in Sources */,
+				OBJ_194 /* Decoder.swift in Sources */,
+				OBJ_195 /* Emitter.swift in Sources */,
+				OBJ_196 /* Encoder.swift in Sources */,
+				OBJ_197 /* Mark.swift in Sources */,
+				OBJ_198 /* Node.Mapping.swift in Sources */,
+				OBJ_199 /* Node.Scalar.swift in Sources */,
+				OBJ_200 /* Node.Sequence.swift in Sources */,
+				OBJ_201 /* Node.swift in Sources */,
+				OBJ_202 /* Parser.swift in Sources */,
+				OBJ_203 /* Representer.swift in Sources */,
+				OBJ_204 /* Resolver.swift in Sources */,
+				OBJ_205 /* String+Yams.swift in Sources */,
+				OBJ_206 /* Tag.swift in Sources */,
+				OBJ_207 /* YamlError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_215 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_216 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_221 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_222 /* Alive.swift in Sources */,
+				OBJ_223 /* Checkuser.swift in Sources */,
+				OBJ_224 /* Checkusers.swift in Sources */,
+				OBJ_225 /* Commands.swift in Sources */,
+				OBJ_226 /* CommandsCommand.swift in Sources */,
+				OBJ_227 /* Creds.swift in Sources */,
+				OBJ_228 /* Delete.swift in Sources */,
+				OBJ_229 /* FilterSocks.swift in Sources */,
+				OBJ_230 /* Help.swift in Sources */,
+				OBJ_231 /* LogHelper.swift in Sources */,
+				OBJ_232 /* RedundaPingDelegate.swift in Sources */,
+				OBJ_233 /* ReportService.swift in Sources */,
+				OBJ_234 /* SEAPIHelper.swift in Sources */,
+				OBJ_235 /* Say.swift in Sources */,
+				OBJ_236 /* decodables.swift in Sources */,
+				OBJ_237 /* globalvars.swift in Sources */,
+				OBJ_238 /* main.swift in Sources */,
+				OBJ_239 /* utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_255 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_256 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_261 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_262 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		OBJ_128 /* PBXTargetDependency */ = {
+		OBJ_210 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Yams::CYaml" /* CYaml */;
+			targetProxy = E8E5010320E86F0F00759B7E /* PBXContainerItemProxy */;
+		};
+		OBJ_246 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Rainbow::Rainbow" /* Rainbow */;
+			targetProxy = E8E5010420E86F0F00759B7E /* PBXContainerItemProxy */;
+		};
+		OBJ_247 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Yams::Yams" /* Yams */;
-			targetProxy = E8696E3B201C836C0085A793 /* PBXContainerItemProxy */;
+			targetProxy = E8E5010520E86F0F00759B7E /* PBXContainerItemProxy */;
 		};
-		OBJ_130 /* PBXTargetDependency */ = {
+		OBJ_248 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Yams::CYaml" /* CYaml */;
-			targetProxy = E8696E3D201C836C0085A793 /* PBXContainerItemProxy */;
+			targetProxy = E8E5010620E86F0F00759B7E /* PBXContainerItemProxy */;
 		};
-		OBJ_132 /* PBXTargetDependency */ = {
+		OBJ_249 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "swiftredunda::SwiftRedunda" /* SwiftRedunda */;
-			targetProxy = E8696E3E201C836C0085A793 /* PBXContainerItemProxy */;
+			targetProxy = E8E5010720E86F0F00759B7E /* PBXContainerItemProxy */;
 		};
-		OBJ_134 /* PBXTargetDependency */ = {
+		OBJ_250 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SwiftChatSE::SwiftChatSE" /* SwiftChatSE */;
-			targetProxy = E8696E3F201C836C0085A793 /* PBXContainerItemProxy */;
-		};
-		OBJ_157 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Yams::CYaml" /* CYaml */;
-			targetProxy = E8696E3C201C836C0085A793 /* PBXContainerItemProxy */;
+			targetProxy = E8E5010820E86F0F00759B7E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		OBJ_100 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		OBJ_101 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
-		OBJ_106 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		OBJ_107 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
 		OBJ_112 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEFINES_MODULE = NO;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -828,33 +922,331 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/.build/checkouts/Yams.git-8068124914099325722/Sources/CYaml/include",
-					"$(SRCROOT)/.build/checkouts/CSQLite--3339553559826851062",
-					"$(SRCROOT)/.build/checkouts/Clibwebsockets-5953100590507442118",
-					"$(SRCROOT)/.build/checkouts/COpenSSL-1810406100236790037",
-					"$(SRCROOT)/sockite.xcodeproj/GeneratedModuleMap/CYaml",
 				);
-				INFOPLIST_FILE = sockite.xcodeproj/sockite_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-L/usr/local/Cellar/libwebsockets/2.4.1_1/lib",
-					"-lwebsockets",
-					"-L/usr/local/Cellar/openssl/1.0.2n/lib",
-					"-lssl",
-					"-L/usr/local/Cellar/openssl/1.0.2n/lib",
-					"-lcrypto",
-				);
-				OTHER_SWIFT_FLAGS = "$(inherited) -I/usr/local/Cellar/libwebsockets/2.4.1_1/include -I/usr/local/Cellar/openssl/1.0.2n/include -I/usr/local/Cellar/openssl/1.0.2n/include -Xcc -fmodule-map-file=$(SRCROOT)/sockite.xcodeproj/GeneratedModuleMap/CYaml/module.modulemap";
-				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
-				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = sockite;
+				INFOPLIST_FILE = sockite.xcodeproj/CYaml_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CYaml;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGET_NAME = CYaml;
 			};
 			name = Debug;
 		};
 		OBJ_113 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEFINES_MODULE = NO;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/Yams.git-8068124914099325722/Sources/CYaml/include",
+				);
+				INFOPLIST_FILE = sockite.xcodeproj/CYaml_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CYaml;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGET_NAME = CYaml;
+			};
+			name = Release;
+		};
+		OBJ_124 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = sockite.xcodeproj/Rainbow_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Rainbow;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGET_NAME = Rainbow;
+			};
+			name = Debug;
+		};
+		OBJ_125 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = sockite.xcodeproj/Rainbow_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Rainbow;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGET_NAME = Rainbow;
+			};
+			name = Release;
+		};
+		OBJ_141 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 3 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/3 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		OBJ_142 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 3 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/3 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		OBJ_147 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/CSQLite--3339553559826851062",
+					"$(SRCROOT)/.build/checkouts/Clibwebsockets-5953100590507442118",
+					"$(SRCROOT)/.build/checkouts/COpenSSL-1810406100236790037",
+				);
+				INFOPLIST_FILE = sockite.xcodeproj/SwiftChatSE_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-I/usr/local/Cellar/libwebsockets/2.4.2_1/include",
+					"-I/usr/local/Cellar/openssl/1.0.2o_2/include",
+					"-I/usr/local/Cellar/openssl/1.0.2o_2/include",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-L/usr/local/Cellar/libwebsockets/2.4.2_1/lib",
+					"-lwebsockets",
+					"-L/usr/local/Cellar/openssl/1.0.2o_2/lib",
+					"-lssl",
+					"-L/usr/local/Cellar/openssl/1.0.2o_2/lib",
+					"-lcrypto",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -I/usr/local/Cellar/libwebsockets/2.4.2_1/include -I/usr/local/Cellar/openssl/1.0.2o_2/include -I/usr/local/Cellar/openssl/1.0.2o_2/include";
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftChatSE;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SwiftChatSE;
+			};
+			name = Debug;
+		};
+		OBJ_148 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/CSQLite--3339553559826851062",
+					"$(SRCROOT)/.build/checkouts/Clibwebsockets-5953100590507442118",
+					"$(SRCROOT)/.build/checkouts/COpenSSL-1810406100236790037",
+				);
+				INFOPLIST_FILE = sockite.xcodeproj/SwiftChatSE_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-I/usr/local/Cellar/libwebsockets/2.4.2_1/include",
+					"-I/usr/local/Cellar/openssl/1.0.2o_2/include",
+					"-I/usr/local/Cellar/openssl/1.0.2o_2/include",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-L/usr/local/Cellar/libwebsockets/2.4.2_1/lib",
+					"-lwebsockets",
+					"-L/usr/local/Cellar/openssl/1.0.2o_2/lib",
+					"-lssl",
+					"-L/usr/local/Cellar/openssl/1.0.2o_2/lib",
+					"-lcrypto",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -I/usr/local/Cellar/libwebsockets/2.4.2_1/include -I/usr/local/Cellar/openssl/1.0.2o_2/include -I/usr/local/Cellar/openssl/1.0.2o_2/include";
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftChatSE;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SwiftChatSE;
+			};
+			name = Release;
+		};
+		OBJ_175 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_176 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_181 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = sockite.xcodeproj/SwiftRedunda_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftRedunda;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SwiftRedunda;
+			};
+			name = Debug;
+		};
+		OBJ_182 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = sockite.xcodeproj/SwiftRedunda_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftRedunda;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SwiftRedunda;
+			};
+			name = Release;
+		};
+		OBJ_190 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/Yams.git-8068124914099325722/Sources/CYaml/include",
+					"$(SRCROOT)/sockite.xcodeproj/GeneratedModuleMap/CYaml",
+				);
+				INFOPLIST_FILE = sockite.xcodeproj/Yams_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/sockite.xcodeproj/GeneratedModuleMap/CYaml/module.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = Yams;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Yams;
+			};
+			name = Debug;
+		};
+		OBJ_191 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/Yams.git-8068124914099325722/Sources/CYaml/include",
+					"$(SRCROOT)/sockite.xcodeproj/GeneratedModuleMap/CYaml",
+				);
+				INFOPLIST_FILE = sockite.xcodeproj/Yams_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/sockite.xcodeproj/GeneratedModuleMap/CYaml/module.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = Yams;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Yams;
+			};
+			name = Release;
+		};
+		OBJ_213 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_214 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_219 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -868,237 +1260,103 @@
 					"$(SRCROOT)/sockite.xcodeproj/GeneratedModuleMap/CYaml",
 				);
 				INFOPLIST_FILE = sockite.xcodeproj/sockite_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-I/usr/local/Cellar/libwebsockets/2.4.2_1/include",
+					"-I/usr/local/Cellar/openssl/1.0.2o_2/include",
+					"-I/usr/local/Cellar/openssl/1.0.2o_2/include",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
-					"-L/usr/local/Cellar/libwebsockets/2.4.1_1/lib",
+					"-L/usr/local/Cellar/libwebsockets/2.4.2_1/lib",
 					"-lwebsockets",
-					"-L/usr/local/Cellar/openssl/1.0.2n/lib",
+					"-L/usr/local/Cellar/openssl/1.0.2o_2/lib",
 					"-lssl",
-					"-L/usr/local/Cellar/openssl/1.0.2n/lib",
+					"-L/usr/local/Cellar/openssl/1.0.2o_2/lib",
 					"-lcrypto",
 				);
-				OTHER_SWIFT_FLAGS = "$(inherited) -I/usr/local/Cellar/libwebsockets/2.4.1_1/include -I/usr/local/Cellar/openssl/1.0.2n/include -I/usr/local/Cellar/openssl/1.0.2n/include -Xcc -fmodule-map-file=$(SRCROOT)/sockite.xcodeproj/GeneratedModuleMap/CYaml/module.modulemap";
+				OTHER_SWIFT_FLAGS = "$(inherited) -I/usr/local/Cellar/libwebsockets/2.4.2_1/include -I/usr/local/Cellar/openssl/1.0.2o_2/include -I/usr/local/Cellar/openssl/1.0.2o_2/include -Xcc -fmodule-map-file=$(SRCROOT)/sockite.xcodeproj/GeneratedModuleMap/CYaml/module.modulemap";
 				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
 				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
+				TARGET_NAME = sockite;
+			};
+			name = Debug;
+		};
+		OBJ_220 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/Yams.git-8068124914099325722/Sources/CYaml/include",
+					"$(SRCROOT)/.build/checkouts/CSQLite--3339553559826851062",
+					"$(SRCROOT)/.build/checkouts/Clibwebsockets-5953100590507442118",
+					"$(SRCROOT)/.build/checkouts/COpenSSL-1810406100236790037",
+					"$(SRCROOT)/sockite.xcodeproj/GeneratedModuleMap/CYaml",
+				);
+				INFOPLIST_FILE = sockite.xcodeproj/sockite_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-I/usr/local/Cellar/libwebsockets/2.4.2_1/include",
+					"-I/usr/local/Cellar/openssl/1.0.2o_2/include",
+					"-I/usr/local/Cellar/openssl/1.0.2o_2/include",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-L/usr/local/Cellar/libwebsockets/2.4.2_1/lib",
+					"-lwebsockets",
+					"-L/usr/local/Cellar/openssl/1.0.2o_2/lib",
+					"-lssl",
+					"-L/usr/local/Cellar/openssl/1.0.2o_2/lib",
+					"-lcrypto",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -I/usr/local/Cellar/libwebsockets/2.4.2_1/include -I/usr/local/Cellar/openssl/1.0.2o_2/include -I/usr/local/Cellar/openssl/1.0.2o_2/include -Xcc -fmodule-map-file=$(SRCROOT)/sockite.xcodeproj/GeneratedModuleMap/CYaml/module.modulemap";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 3.0;
 				TARGET_NAME = sockite;
 			};
 			name = Release;
 		};
-		OBJ_137 /* Debug */ = {
+		OBJ_253 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/.build/checkouts/Yams.git-8068124914099325722/Sources/CYaml/include",
-					"$(SRCROOT)/sockite.xcodeproj/GeneratedModuleMap/CYaml",
-				);
-				INFOPLIST_FILE = sockite.xcodeproj/Yams_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/sockite.xcodeproj/GeneratedModuleMap/CYaml/module.modulemap";
-				PRODUCT_BUNDLE_IDENTIFIER = Yams;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = Yams;
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 3 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/3 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		OBJ_138 /* Release */ = {
+		OBJ_254 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/.build/checkouts/Yams.git-8068124914099325722/Sources/CYaml/include",
-					"$(SRCROOT)/sockite.xcodeproj/GeneratedModuleMap/CYaml",
-				);
-				INFOPLIST_FILE = sockite.xcodeproj/Yams_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/sockite.xcodeproj/GeneratedModuleMap/CYaml/module.modulemap";
-				PRODUCT_BUNDLE_IDENTIFIER = Yams;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = Yams;
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 3 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/3 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
-		OBJ_159 /* Debug */ = {
+		OBJ_259 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEFINES_MODULE = NO;
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/.build/checkouts/Yams.git-8068124914099325722/Sources/CYaml/include",
-				);
-				INFOPLIST_FILE = sockite.xcodeproj/CYaml_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = CYaml;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGET_NAME = CYaml;
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
-		OBJ_160 /* Release */ = {
+		OBJ_260 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEFINES_MODULE = NO;
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/.build/checkouts/Yams.git-8068124914099325722/Sources/CYaml/include",
-				);
-				INFOPLIST_FILE = sockite.xcodeproj/CYaml_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = CYaml;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGET_NAME = CYaml;
-			};
-			name = Release;
-		};
-		OBJ_170 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = sockite.xcodeproj/SwiftRedunda_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = SwiftRedunda;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
 				SWIFT_VERSION = 4.0;
-				TARGET_NAME = SwiftRedunda;
-			};
-			name = Debug;
-		};
-		OBJ_171 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = sockite.xcodeproj/SwiftRedunda_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = SwiftRedunda;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = SwiftRedunda;
-			};
-			name = Release;
-		};
-		OBJ_178 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/.build/checkouts/CSQLite--3339553559826851062",
-					"$(SRCROOT)/.build/checkouts/Clibwebsockets-5953100590507442118",
-					"$(SRCROOT)/.build/checkouts/COpenSSL-1810406100236790037",
-				);
-				INFOPLIST_FILE = sockite.xcodeproj/SwiftChatSE_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-L/usr/local/Cellar/libwebsockets/2.4.1_1/lib",
-					"-lwebsockets",
-					"-L/usr/local/Cellar/openssl/1.0.2n/lib",
-					"-lssl",
-					"-L/usr/local/Cellar/openssl/1.0.2n/lib",
-					"-lcrypto",
-				);
-				OTHER_SWIFT_FLAGS = "$(inherited) -I/usr/local/Cellar/libwebsockets/2.4.1_1/include -I/usr/local/Cellar/openssl/1.0.2n/include -I/usr/local/Cellar/openssl/1.0.2n/include";
-				PRODUCT_BUNDLE_IDENTIFIER = SwiftChatSE;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = SwiftChatSE;
-			};
-			name = Debug;
-		};
-		OBJ_179 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/.build/checkouts/CSQLite--3339553559826851062",
-					"$(SRCROOT)/.build/checkouts/Clibwebsockets-5953100590507442118",
-					"$(SRCROOT)/.build/checkouts/COpenSSL-1810406100236790037",
-				);
-				INFOPLIST_FILE = sockite.xcodeproj/SwiftChatSE_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-L/usr/local/Cellar/libwebsockets/2.4.1_1/lib",
-					"-lwebsockets",
-					"-L/usr/local/Cellar/openssl/1.0.2n/lib",
-					"-lssl",
-					"-L/usr/local/Cellar/openssl/1.0.2n/lib",
-					"-lcrypto",
-				);
-				OTHER_SWIFT_FLAGS = "$(inherited) -I/usr/local/Cellar/libwebsockets/2.4.1_1/include -I/usr/local/Cellar/openssl/1.0.2n/include -I/usr/local/Cellar/openssl/1.0.2n/include";
-				PRODUCT_BUNDLE_IDENTIFIER = SwiftChatSE;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = SwiftChatSE;
 			};
 			name = Release;
 		};
@@ -1144,98 +1402,71 @@
 			};
 			name = Release;
 		};
-		OBJ_88 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		OBJ_89 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
-		OBJ_94 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		OBJ_95 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		OBJ_105 /* Build configuration list for PBXNativeTarget "SwiftChatSEPackageDescription" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_106 /* Debug */,
-				OBJ_107 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		OBJ_111 /* Build configuration list for PBXNativeTarget "sockite" */ = {
+		OBJ_111 /* Build configuration list for PBXNativeTarget "CYaml" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				OBJ_112 /* Debug */,
 				OBJ_113 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
-		OBJ_136 /* Build configuration list for PBXNativeTarget "Yams" */ = {
+		OBJ_123 /* Build configuration list for PBXNativeTarget "Rainbow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_137 /* Debug */,
-				OBJ_138 /* Release */,
+				OBJ_124 /* Debug */,
+				OBJ_125 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
-		OBJ_158 /* Build configuration list for PBXNativeTarget "CYaml" */ = {
+		OBJ_140 /* Build configuration list for PBXNativeTarget "RainbowPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_159 /* Debug */,
-				OBJ_160 /* Release */,
+				OBJ_141 /* Debug */,
+				OBJ_142 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
-		OBJ_169 /* Build configuration list for PBXNativeTarget "SwiftRedunda" */ = {
+		OBJ_146 /* Build configuration list for PBXNativeTarget "SwiftChatSE" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_170 /* Debug */,
-				OBJ_171 /* Release */,
+				OBJ_147 /* Debug */,
+				OBJ_148 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
-		OBJ_177 /* Build configuration list for PBXNativeTarget "SwiftChatSE" */ = {
+		OBJ_174 /* Build configuration list for PBXNativeTarget "SwiftChatSEPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_178 /* Debug */,
-				OBJ_179 /* Release */,
+				OBJ_175 /* Debug */,
+				OBJ_176 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
+		};
+		OBJ_180 /* Build configuration list for PBXNativeTarget "SwiftRedunda" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_181 /* Debug */,
+				OBJ_182 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_189 /* Build configuration list for PBXNativeTarget "Yams" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_190 /* Debug */,
+				OBJ_191 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		OBJ_2 /* Build configuration list for PBXProject "sockite" */ = {
 			isa = XCConfigurationList;
@@ -1244,34 +1475,43 @@
 				OBJ_4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
-		OBJ_87 /* Build configuration list for PBXNativeTarget "sockitePackageDescription" */ = {
+		OBJ_212 /* Build configuration list for PBXNativeTarget "YamsPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_88 /* Debug */,
-				OBJ_89 /* Release */,
+				OBJ_213 /* Debug */,
+				OBJ_214 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
-		OBJ_93 /* Build configuration list for PBXNativeTarget "YamsPackageDescription" */ = {
+		OBJ_218 /* Build configuration list for PBXNativeTarget "sockite" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_94 /* Debug */,
-				OBJ_95 /* Release */,
+				OBJ_219 /* Debug */,
+				OBJ_220 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
-		OBJ_99 /* Build configuration list for PBXNativeTarget "swiftredundaPackageDescription" */ = {
+		OBJ_252 /* Build configuration list for PBXNativeTarget "sockitePackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_100 /* Debug */,
-				OBJ_101 /* Release */,
+				OBJ_253 /* Debug */,
+				OBJ_254 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
+		};
+		OBJ_258 /* Build configuration list for PBXNativeTarget "swiftredundaPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_259 /* Debug */,
+				OBJ_260 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

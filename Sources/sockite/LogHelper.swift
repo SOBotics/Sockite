@@ -19,7 +19,11 @@ struct Log {
     }
     
     static func logWarning(_ str: String, consoleOutputPrefix: String? = nil) {
-        
+        if let prefix = consoleOutputPrefix {
+            Log.log("[WARN][\(prefix)] \(str)".lightYellow)
+        } else {
+            Log.log("[WARN] \(str)".lightYellow)
+        }
     }
     
     static func logInfo(_ str: String, consoleOutputPrefix: String? = nil) {
