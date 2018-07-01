@@ -5,15 +5,16 @@ struct Log {
     static func log(_ str: String, withColor color: Color = .`default`, withDate date: Date = Date()) {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd HH:mm:ss:SSSS"
-        print("[\(formatter.string(from: date))] \(str)")
+        print("[\(formatter.string(from: date))] \(str.applyingColor(color))")
     }
     
-    static func handle(error: String, consoleOutputPrefix: String? = nil) {
+    static func handle(error: String, consoleOutputPrefix: String? = nil, postToChat: Bool = true) {
         if let prefix = consoleOutputPrefix {
             Log.log("[ERROR][\(prefix)] \(error)".lightRed)
-            broadcastMessage(error)
         } else {
             Log.log("[ERROR] \(error)".lightRed)
+        }
+        if postToChat {
             broadcastMessage(error)
         }
     }
@@ -32,9 +33,5 @@ struct Log {
         } else {
             Log.log("[INFO] \(str)")
         }
-    }
-    
-    static func logReportService() {
-        // stub
     }
 }

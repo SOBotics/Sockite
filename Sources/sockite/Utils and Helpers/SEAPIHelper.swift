@@ -20,6 +20,9 @@ class SEAPIHelper {
                 if let data = data, response.statusCode == 200 {
                     do {
                         let json = try JSONDecoder().decode(BadgeReciepents.self, from: data)
+                        if let quotaRemaining = json.quota_remaining {
+                            quota = quotaRemaining
+                        }
                         callback(json)
                     } catch {
                         Log.handle(error: "An error occurred while decoding JSON: \(error.localizedDescription)", consoleOutputPrefix: "SEAPIHelper")

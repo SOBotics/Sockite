@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E87EE41020E8B5E300AE5E3F /* Quota.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87EE40E20E8B55B00AE5E3F /* Quota.swift */; };
 		OBJ_154 /* api.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* api.c */; };
 		OBJ_155 /* emitter.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_82 /* emitter.c */; };
 		OBJ_156 /* parser.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_83 /* parser.c */; };
@@ -191,6 +192,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E87EE40E20E8B55B00AE5E3F /* Quota.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quota.swift; sourceTree = "<group>"; };
 		OBJ_10 /* Creds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creds.swift; sourceTree = "<group>"; };
 		OBJ_100 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		OBJ_101 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
@@ -465,6 +467,7 @@
 				OBJ_21 /* Delete.swift */,
 				OBJ_15 /* Say.swift */,
 				OBJ_12 /* Help.swift */,
+				E87EE40E20E8B55B00AE5E3F /* Quota.swift */,
 			);
 			path = Commands;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				OBJ_27 /* SQLiteHelper.swift */,
 				OBJ_28 /* decodables.swift */,
 				OBJ_29 /* utils.swift */,
+				OBJ_22 /* globalvars.swift */,
 			);
 			path = "Utils and Helpers";
 			sourceTree = "<group>";
@@ -653,7 +657,6 @@
 				OBJ_11 /* FilterSocks.swift */,
 				OBJ_13 /* RedundaPingDelegate.swift */,
 				OBJ_14 /* ReportService.swift */,
-				OBJ_22 /* globalvars.swift */,
 				OBJ_23 /* main.swift */,
 			);
 			name = sockite;
@@ -938,6 +941,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 9999;
+				TargetAttributes = {
+					"Yams::CYaml" = {
+						LastSwiftMigration = 0940;
+					};
+				};
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "sockite" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1140,6 +1148,7 @@
 				OBJ_306 /* Creds.swift in Sources */,
 				OBJ_307 /* FilterSocks.swift in Sources */,
 				OBJ_308 /* Help.swift in Sources */,
+				E87EE41020E8B5E300AE5E3F /* Quota.swift in Sources */,
 				OBJ_309 /* RedundaPingDelegate.swift in Sources */,
 				OBJ_310 /* ReportService.swift in Sources */,
 				OBJ_311 /* Say.swift in Sources */,
@@ -1228,7 +1237,8 @@
 		OBJ_151 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEFINES_MODULE = NO;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1247,6 +1257,8 @@
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGET_NAME = CYaml;
 			};
 			name = Debug;
@@ -1254,7 +1266,8 @@
 		OBJ_152 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEFINES_MODULE = NO;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1273,6 +1286,7 @@
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGET_NAME = CYaml;
 			};
 			name = Release;
