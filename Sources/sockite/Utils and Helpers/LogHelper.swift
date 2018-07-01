@@ -4,7 +4,7 @@ import Rainbow
 struct Log {
     static func log(_ str: String, withColor color: Color = .`default`, withDate date: Date = Date()) {
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy/mm/dd HH:mm:ss:SSSS"
+        formatter.dateFormat = "yyyy/MM/dd HH:mm:ss:SSSS"
         print("[\(formatter.string(from: date))] \(str)")
     }
     

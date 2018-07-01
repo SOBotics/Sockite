@@ -3,11 +3,14 @@ import SwiftChatSE
 import SwiftRedunda
 import Yams
 
+Log.log("Welcome to Sockite! Now starting up!", withColor: .lightMagenta)
+Log.logInfo("Decoding credentials...")
 let creds = try YAMLDecoder().decode(Creds.self, from: String(contentsOf: URL(fileURLWithPath: "creds.yml"), encoding: .utf8))
 
+Log.logInfo("Initializing commands...")
 let commandService = CommandService()
-let pingService = RedundaPingService(key: creds.redunda_key, version: "0.1.0")
 
+Log.logInfo("Starting chat service...")
 let client = Client()
 try! client.login(email: creds.email, password: creds.password)
 
@@ -19,6 +22,8 @@ for requiredRoom in creds.rooms {
     rooms.append(room)
 }
 
+Log.logInfo("Initializing Redunda...")
+let pingService = RedundaPingService(key: creds.redunda_key, version: "0.1.0")
 pingService.delegate = RedundaPingDelegate()
 pingService.ping()
 pingService.startPinging()
@@ -30,6 +35,9 @@ let sqliteHelper = SQLiteHelper()
 sqliteHelper.connect()
 Log.logInfo("Sockite started!")
 broadcastMessage("\(sockitePrefix) started (running on \(pingService.getLocation()))")
+Log.logInfo("Starting sock reporting service...")
+let reportService = ReportService()
+reportService.startScanning()
 
 for room in rooms {
     room.onMessage { msg, edit in
