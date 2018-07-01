@@ -1,13 +1,13 @@
 struct QuestionJSON: Decodable {
     struct Item: Decodable {
         struct Answer: Decodable {
-            var owner: Owner?
+            var owner: User?
             var is_accepted: Bool?
             var answer_id: Int?
         }
         var tags: [String]?
         var answers: [Answer]?
-        var owner: Owner?
+        var owner: User?
         var is_answered: Bool?
         var accepted_answer_id: Int?
         var question_id: Int?
@@ -20,7 +20,7 @@ struct QuestionJSON: Decodable {
     var backoff: Int?
 }
 
-struct Owner: Decodable {
+struct User: Decodable {
     var reputation: Int?
     var user_id: Int?
     var display_name: String?
@@ -29,7 +29,7 @@ struct Owner: Decodable {
 
 struct AnswerJSON: Decodable {
     struct Item: Decodable {
-        var owner: Owner?
+        var owner: User?
         var down_vote_count: Int?
         var up_vote_count: Int?
         var is_accepted: Bool?
@@ -42,7 +42,7 @@ struct AnswerJSON: Decodable {
 
 struct BadgeReciepents: Decodable {
     struct Item: Decodable {
-        var user: Owner?
+        var user: User?
     }
     var items: [Item]?
     var quota_remaining: Int?

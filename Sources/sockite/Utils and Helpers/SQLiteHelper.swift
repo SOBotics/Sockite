@@ -24,7 +24,7 @@ class SQLiteHelper {
         }
     }
     
-    func searchIfUserChecked(_ user: Owner) -> Bool {
+    func searchIfUserChecked(_ user: User) -> Bool {
         if db == nil {
             Log.logWarning("Database not connected, now attempting to connect")
             self.connect()
@@ -41,13 +41,13 @@ class SQLiteHelper {
         return false
     }
     
-    func insertChecked(user: Owner) {
+    func insertChecked(user: User) {
         if db == nil {
             Log.logWarning("Database not connected, now attempting to connect")
             self.connect()
         }
         do {
-            try db.run(tumbleweedBadge.insert(userId <- String(user.user_id!)))
+            try db!.run(tumbleweedBadge.insert(userId <- String(user.user_id!)))
         } catch {
             Log.handle(error: "Error while inserting checked user into database: \(error.localizedDescription)", consoleOutputPrefix: "SQLite")
         }

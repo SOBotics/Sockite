@@ -11,3 +11,5 @@ func checkForChooChoo(inMessage msg: ChatMessage) {
         msg.room.postMessage("[🚃](https://youtu.be/bQGj3F5KTB8?t=13s)")
     }
 }
+
+let sockitePrefix = "[ [Sockite](https://github.com/SOBotics/Sockite) ]"

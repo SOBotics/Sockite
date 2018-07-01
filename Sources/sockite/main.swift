@@ -29,7 +29,7 @@ Log.logInfo("Connecting database...")
 let sqliteHelper = SQLiteHelper()
 sqliteHelper.connect()
 Log.logInfo("Sockite started!")
-broadcastMessage("[ [Sockite](https://github.com/SOBotics/Sockite) ] started (running on \(pingService.getLocation()))")
+broadcastMessage("\(sockitePrefix) started (running on \(pingService.getLocation()))")
 
 for room in rooms {
     room.onMessage { msg, edit in
