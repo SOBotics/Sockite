@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E87EE41020E8B5E300AE5E3F /* Quota.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87EE40E20E8B55B00AE5E3F /* Quota.swift */; };
+		E87EE41320E8D91B00AE5E3F /* UserScanQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87EE41120E8D89400AE5E3F /* UserScanQueue.swift */; };
+		E87EE41620E8FD7A00AE5E3F /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87EE41420E8FD6C00AE5E3F /* Queue.swift */; };
 		OBJ_154 /* api.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* api.c */; };
 		OBJ_155 /* emitter.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_82 /* emitter.c */; };
 		OBJ_156 /* parser.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_83 /* parser.c */; };
@@ -193,6 +195,8 @@
 
 /* Begin PBXFileReference section */
 		E87EE40E20E8B55B00AE5E3F /* Quota.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quota.swift; sourceTree = "<group>"; };
+		E87EE41120E8D89400AE5E3F /* UserScanQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserScanQueue.swift; sourceTree = "<group>"; };
+		E87EE41420E8FD6C00AE5E3F /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		OBJ_10 /* Creds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creds.swift; sourceTree = "<group>"; };
 		OBJ_100 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		OBJ_101 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
@@ -481,6 +485,8 @@
 				OBJ_28 /* decodables.swift */,
 				OBJ_29 /* utils.swift */,
 				OBJ_22 /* globalvars.swift */,
+				E87EE41120E8D89400AE5E3F /* UserScanQueue.swift */,
+				E87EE41420E8FD6C00AE5E3F /* Queue.swift */,
 			);
 			path = "Utils and Helpers";
 			sourceTree = "<group>";
@@ -1147,6 +1153,8 @@
 				OBJ_305 /* Commands.swift in Sources */,
 				OBJ_306 /* Creds.swift in Sources */,
 				OBJ_307 /* FilterSocks.swift in Sources */,
+				E87EE41620E8FD7A00AE5E3F /* Queue.swift in Sources */,
+				E87EE41320E8D91B00AE5E3F /* UserScanQueue.swift in Sources */,
 				OBJ_308 /* Help.swift in Sources */,
 				E87EE41020E8B5E300AE5E3F /* Quota.swift in Sources */,
 				OBJ_309 /* RedundaPingDelegate.swift in Sources */,

@@ -5,7 +5,23 @@ struct Log {
     static func log(_ str: String, withColor color: Color = .`default`, withDate date: Date = Date()) {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd HH:mm:ss:SSSS"
-        print("[\(formatter.string(from: date))] \(str.applyingColor(color))")
+        if color == .`default` {
+            print("[\(formatter.string(from: date))] \(str)")
+        } else {
+            print("[\(formatter.string(from: date))] \(str.applyingColor(color))")
+        }
+        if dataDir != "<undefined>" {
+            let url = URL(fileURLWithPath: dataDir + "logfile.log")
+            do {
+                let newStr = "\(str.clearColor)\n"
+                let fileHandle = try FileHandle(forWritingTo: url)
+                fileHandle.seekToEndOfFile()
+                fileHandle.write(newStr.data(using: .utf8)!)
+                fileHandle.closeFile()
+            } catch {
+                print("!Warning! Error in writing items to log: \(error.localizedDescription) (This can be safely ignored if it occurs a few seconds after startup)")
+            }
+        }
     }
     
     static func handle(error: String, consoleOutputPrefix: String? = nil, postToChat: Bool = true) {
@@ -33,5 +49,9 @@ struct Log {
         } else {
             Log.log("[INFO] \(str)")
         }
+    }
+    
+    private static func writeToLogFile(_ str: String) {
+        
     }
 }

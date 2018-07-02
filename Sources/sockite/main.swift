@@ -7,6 +7,13 @@ Log.log("Welcome to Sockite! Now starting up!", withColor: .lightMagenta)
 Log.logInfo("Decoding credentials...")
 let creds = try YAMLDecoder().decode(Creds.self, from: String(contentsOf: URL(fileURLWithPath: "creds.yml"), encoding: .utf8))
 
+Log.logInfo("Initializing globalvars...")
+dataDir = creds.data_dir
+
+Log.logInfo("Initializing logfile...")
+try? FileManager.default.removeItem(atPath: dataDir + "logfile.log") // reset logfile
+FileManager.default.createFile(atPath: dataDir + "logfile.log", contents: nil)
+
 Log.logInfo("Initializing commands...")
 let commandService = CommandService()
 
@@ -33,8 +40,9 @@ Thread.sleep(forTimeInterval: 10)
 Log.logInfo("Connecting database...")
 let sqliteHelper = SQLiteHelper()
 sqliteHelper.connect()
+location = pingService.getLocation()
 Log.logInfo("Sockite started!")
-broadcastMessage("\(sockitePrefix) started (running on \(pingService.getLocation()))")
+broadcastMessage("\(sockitePrefix) started (running on \(location))")
 Log.logInfo("Starting sock reporting service...")
 let reportService = ReportService()
 reportService.startScanning()

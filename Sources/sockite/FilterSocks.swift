@@ -35,12 +35,12 @@ class FilterSocks {
                             }
                         }
                     }
+                    if !resDict.isEmpty {
+                        callback(resDict, nil)
+                    } else {
+                        callback(nil, nil)
+                    }
                 })
-            }
-            if !resDict.isEmpty {
-                callback(resDict, nil)
-            } else {
-                callback(nil, nil)
             }
         })
     }
@@ -48,71 +48,50 @@ class FilterSocks {
     
     // ==== QUESTION FILTERS ====
     static func getScoreOfQuestions(user: String, callback: @escaping ([Int : (Double, [String])]?, Error?) -> ()) {
-        var dataTask: URLSessionDataTask?
-        let session = URLSession(configuration: .default)
-        
-        if var urlComponents = URLComponents(string: "https://api.stackexchange.com/2.2/users/\(user)/questions") {
-            urlComponents.query = "pagesize=100&order=desc&sort=activity&site=stackoverflow&filter=!0V-ZwUEu0wMbto7XHeIh96H_K&key=OJ*iP6ih)G0W1CQFgKllSg(("
-            guard let url = urlComponents.url else {
-                callback(nil, FilterSocksError.invalidUrlComponents)
+        Log.logInfo("Scanning questions of user \(user)", consoleOutputPrefix: "FilterSocks")
+        SEAPIHelper.getQuestions(ofUser: user) { json in
+            guard let items = json.items else {
+                callback(nil, FilterSocksError.invalidJson)
                 return
             }
-            Log.logInfo(url.absoluteString)
-            
-            dataTask = session.dataTask(with: url) { data, response, error in
-                defer { dataTask = nil; session.finishTasksAndInvalidate() }
-                let response = response as! HTTPURLResponse
-                if response.statusCode != 200 {
-                    Log.handle(error: "Invalid network response \(response.statusCode)")
-                }
-                if let data = data, response.statusCode == 200 {
-                    do {
-                        let json = try JSONDecoder().decode(QuestionJSON.self, from: data)
-                        guard let items = json.items else {
-                            callback(nil, FilterSocksError.invalidJson)
-                            return
-                        }
-                        
-                        if items.isEmpty {
-                            callback([:], nil)
-                            return
-                        }
-                        
-                        // START FILTERING
-                        var socks: [Int: [(Double, String?)]] = [:]
-                        let filters = [sameAnswerer75, sameAnswerer100, haveUpvote]
-                        for filter in filters {
-                            let filterRes = try filter(items)
-                            for (user, reason) in filterRes {
-                                if socks[user] != nil {
-                                    socks[user]!.append(reason)
-                                } else {
-                                    socks[user] = [reason]
-                                }
-                            }
-                        }
-                        // DONE FILTERING, RETURN RESULT
-                        var resDict: [Int : (Double, [String])] = [:]
-                        for (sock, ress) in socks {
-                            var finalScore = 0.0
-                            var reasons: [String] = []
-                            for res in ress {
-                                finalScore += res.0
-                                if let reason = res.1 {
-                                    reasons.append(reason)
-                                }
-                            }
-                            resDict[sock] = (finalScore, reasons)
-                        }
-                        callback(resDict, nil)
-                        
-                    } catch {
-                        callback(nil, error)
-                    }
-                } else {
-                }
+
+            if items.isEmpty {
+                callback([:], nil)
+                return
             }
-            dataTask?.resume()
+
+            // START FILTERING
+            var socks: [Int: [(Double, String?)]] = [:]
+            let filters = [sameAnswerer75, sameAnswerer100, haveUpvote]
+            do {
+                for filter in filters {
+                    let filterRes = try filter(items)
+                    for (user, reason) in filterRes {
+                        if socks[user] != nil {
+                            socks[user]!.append(reason)
+                        } else {
+                            socks[user] = [reason]
+                        }
+                    }
+                }
+                // DONE FILTERING, RETURN RESULT
+                var resDict: [Int : (Double, [String])] = [:]
+                for (sock, ress) in socks {
+                    var finalScore = 0.0
+                    var reasons: [String] = []
+                    for res in ress {
+                        finalScore += res.0
+                        if let reason = res.1 {
+                            reasons.append(reason)
+                        }
+                    }
+                    resDict[sock] = (finalScore, reasons)
+                }
+                callback(resDict, nil)
+            } catch {
+                Log.handle(error: "Something went wrong with the filters!")
+                callback(nil, error)
+            }
         }
     }
     
@@ -161,27 +140,36 @@ class FilterSocks {
         }
         var answerOwners: [Int] = []
         for item in items {
+            Log.logInfo("Item in sameAnswerer100 queued", consoleOutputPrefix: "FilterSocks")
             guard let answers = item.answers else {
                 Log.logWarning("item.answers is nil!")
-                broadcastMessage("Error occured while proccesing sameAnswerer100, see the log for more details (@paper)")
                 continue
             }
+            Log.logInfo("item.answers is not nil, iterating", consoleOutputPrefix: "FilterSocks")
             for answer in answers {
                 answerOwners.append(answer.owner!.user_id!)
             }
         }
         
+        if answerOwners.isEmpty {
+            Log.logInfo("sameAnswerer100 passed (no answer owners)", consoleOutputPrefix: "FilterSocks")
+            return [:]
+        }
+        
         for answerOwner in answerOwners {
             if answerOwners[0] != answerOwner {
+                Log.logInfo("sameAnswerer100 passed", consoleOutputPrefix: "FilterSocks")
                 return [:]
             }
         }
         
+        Log.logInfo("sameAnswerer100 failed", consoleOutputPrefix: "FilterSocks")
         return [answerOwners[0] : (6.0, "100% of answers are answered by same user (user: [\(answerOwners[0])](https://stackoverflow.com/users/\(answerOwners[0])")]
     }
     
     // all questions have an upvote
     static func haveUpvote(_ items: [QuestionJSON.Item]) throws -> [Int : (Double, String?)] {
+        Log.logInfo("Testing haveUpvote", consoleOutputPrefix: "FilterSocks")
         for item in items {
             guard let upvoteCount = item.up_vote_count else {
                 Log.logWarning("item.up_vote_count is nil!")
@@ -189,47 +177,27 @@ class FilterSocks {
                 continue
             }
             if upvoteCount <= 0 {
+                Log.logInfo("haveUpvote passed")
                 return [:]
             }
         }
-        return [-1 : (2.3, "100% of questions have 1 upvote")]
+        
+        Log.logInfo("haveUpvote failed")
+        return [-1 : (2.3, "100% of questions have at lease 1 upvote")]
     }
     
     // ==== ANSWER FILTERS ====
     static func getScoreOfAnswers(user: String, callback: @escaping ([Int : (Double, [String])]?, Error?) -> ()) {
-        var dataTask: URLSessionDataTask?
-        let session = URLSession(configuration: .default)
-        
-        if var urlComponents = URLComponents(string: "https://api.stackexchange.com/2.2/users/\(user)/answers") {
-            urlComponents.query = "pagesize=100&order=desc&sort=activity&site=stackoverflow&filter=!-*jbN.L_QwxL"
-            guard let url = urlComponents.url else {
-                callback(nil, FilterSocksError.invalidUrlComponents)
+        Log.logInfo("Scanning answers of user \(user)", consoleOutputPrefix: "FilterSocks")
+        SEAPIHelper.getAnswers(ofUser: user) { json in
+            guard let items = json.items else {
+                callback(nil, FilterSocksError.invalidJson)
                 return
             }
-            Log.logInfo(url.absoluteString)
-            
-            dataTask = session.dataTask(with: url) { data, response, error in
-                defer { dataTask = nil; session.finishTasksAndInvalidate() }
-                let response = response as! HTTPURLResponse
-                if response.statusCode != 200 {
-                    
-                }
-                if let data = data, response.statusCode == 200 {
-                    do {
-                        let json = try JSONDecoder().decode(QuestionJSON.self, from: data)
-                        guard let items = json.items else {
-                            callback(nil, FilterSocksError.invalidJson)
-                            return
-                        }
                         
-                        if items.isEmpty {
-                            callback([:], nil)
-                            return
-                        }
-                    } catch let jsonError {
-                        callback(nil, jsonError)
-                    }
-                }
+            if items.isEmpty {
+                callback([:], nil)
+                return
             }
         }
     }

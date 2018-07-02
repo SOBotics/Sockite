@@ -9,7 +9,7 @@ class SQLiteHelper {
     
     func connect() {
         do {
-            db = try Connection(creds.sqlite_file_path)
+            db = try Connection(dataDir + "db.sqlite3")
             db?.trace { Log.logInfo($0, consoleOutputPrefix: "SQLite") }
         } catch {
             Log.handle(error: "Error while connecting to db: \(error.localizedDescription)", consoleOutputPrefix: "SQLite")
@@ -20,7 +20,7 @@ class SQLiteHelper {
                 t.column(userId)
             })
         } catch {
-            Log.handle(error: "Error while creating table \"tumbleweedBadge\": \(error.localizedDescription)", consoleOutputPrefix: "SQLite")
+            Log.logWarning("Unable to create table, possibly because table already exists", consoleOutputPrefix: "SQLite")
         }
     }
     
@@ -41,13 +41,15 @@ class SQLiteHelper {
         return false
     }
     
-    func insertChecked(user: User) {
+    func insertChecked(userId uid: String) {
         if db == nil {
             Log.logWarning("Database not connected, now attempting to connect")
             self.connect()
         }
         do {
-            try db!.run(tumbleweedBadge.insert(userId <- String(user.user_id!)))
+            Log.logInfo("Inserting user id into scanned database", consoleOutputPrefix: "SQLite")
+            try db!.run(tumbleweedBadge.insert(userId <- uid))
+            Log.logInfo("User id inserted into scanned database", consoleOutputPrefix: "SQLite")
         } catch {
             Log.handle(error: "Error while inserting checked user into database: \(error.localizedDescription)", consoleOutputPrefix: "SQLite")
         }

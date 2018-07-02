@@ -3,13 +3,15 @@ import Dispatch
 class ReportService {
     
     private var scanning = false
+    private let userScanQueue = UserScanQueue()
     
-    func startScanning(withTimeInterval timeInterval: Int = 600) {
+    func startScanning(withTimeInterval timeInterval: Int = 1200) {
         scanning = true
         let queue = DispatchQueue(label: "sockite_report_service", attributes: .concurrent)
         queue.async {
             while self.scanning {
                 SEAPIHelper.getBadges { badgeReciepents in
+                    Log.logInfo("Batching users for scan...", consoleOutputPrefix: "ReportService")
                     self.determineAndScan(users: badgeReciepents.items!.map { $0.user! })
                 }
                 sleep(UInt32(timeInterval))
@@ -30,23 +32,11 @@ class ReportService {
     
     func determineAndScan(users: [User]) {
         for user in users {
-            let strUserId = String(user.user_id!)
             if !sqliteHelper.searchIfUserChecked(user) {
-                Log.logInfo("User \(strUserId) is on the queue to be scanned", consoleOutputPrefix: "ReportService")
-                FilterSocks.getScoreOfUserAndTarget(user: strUserId, { res, err in
-                    if let error = err {
-                        Log.handle(error: "An error occurred while scanning user \(strUserId): \(error.localizedDescription)", consoleOutputPrefix: "ReportService")
-                    } else if let res = res {
-                        Log.logInfo("Possible socks of user \(strUserId) found!", consoleOutputPrefix: "ReportService")
-                        broadcastMessage("\(sockitePrefix) Possible socks of user [\(strUserId)](https://stackoverflow.com/u/\(strUserId))")
-                        for (user, (score, reasons)) in res {
-                            broadcastMessage("User [\(user)](https://stackoverflow.com/u/\(user)): **\(reasons)**; **\(score)**")
-                        }
-                    } else {
-                        Log.logInfo("User \(strUserId) scanned, no socks found", consoleOutputPrefix: "ReportService")
-                    }
-                })
+                Log.logInfo("User \(user.user_id!) is on the queue to be scanned", consoleOutputPrefix: "ReportService")
+                self.userScanQueue.queue.push(value: user)
             }
         }
+        self.userScanQueue.flushQueue()
     }
 }

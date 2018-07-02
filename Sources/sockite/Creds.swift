@@ -3,5 +3,5 @@ struct Creds: Codable {
     var email: String
     var password: String
     var rooms: [Int]
-    var sqlite_file_path: String
+    var data_dir: String
 }
