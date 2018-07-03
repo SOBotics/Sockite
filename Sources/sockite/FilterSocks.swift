@@ -15,32 +15,36 @@ class FilterSocks {
                 callback(nil, err)
             }
             if let qRes = qRes {
-                getScoreOfAnswers(user: user, callback: { aRes, err in
-                    if let err = err {
-                        callback(nil, err)
-                    }
-                    if let aRes = aRes {
-                        for (qSock, data) in qRes {
-                            if let sock = resDict[qSock] {
-                                let newScore = sock.0 + data.0
-                                let newReason = sock.1 + ", " + data.1.joined(separator: ", ")
-                                resDict[qSock] = (newScore, newReason)
-                            }
-                        }
-                        for (aSock, data) in aRes {
-                            if let sock = resDict[aSock] {
-                                let newScore = sock.0 + data.0
-                                let newReason = sock.1 + ", " + data.1.joined(separator: ", ")
-                                resDict[aSock] = (newScore, newReason)
-                            }
+               //getScoreOfAnswers(user: user, callback: { aRes, err in // NEEDS TO BE FIXED
+                    Log.logInfo("Finishing up...", consoleOutputPrefix: "FilterSocks")
+//                    if let err = err {
+//                        callback(nil, err)
+//                    }
+                    for (qSock, data) in qRes {
+                        Log.logInfo("Building question results", consoleOutputPrefix: "FilterSocks")
+                        if let sock = resDict[qSock] {
+                            let newScore = sock.0 + data.0
+                            let newReason = sock.1 + ", " + data.1.joined(separator: ", ")
+                            resDict[qSock] = (newScore, newReason)
                         }
                     }
+//                    if let aRes = aRes {
+//                        for (aSock, data) in aRes {
+//                            if let sock = resDict[aSock] {
+//                                let newScore = sock.0 + data.0
+//                                let newReason = sock.1 + ", " + data.1.joined(separator: ", ")
+//                                resDict[aSock] = (newScore, newReason)
+//                            }
+//                        }
+//                    }
                     if !resDict.isEmpty {
                         callback(resDict, nil)
                     } else {
                         callback(nil, nil)
                     }
-                })
+                //})
+            } else {
+                callback(nil, nil)
             }
         })
     }

@@ -19,6 +19,7 @@ class UserScanQueue {
     
     func scan(_ strUserId: String) {
         FilterSocks.getScoreOfUserAndTarget(user: strUserId, { res, err in
+            Log.logInfo("Response from FilterSocks received", consoleOutputPrefix: "ReportService|UserScanQueue")
             if let error = err {
                 Log.handle(error: "An error occurred while scanning user \(strUserId): \(error.localizedDescription)", consoleOutputPrefix: "ReportService|UserScanQueue")
             } else if let res = res {
