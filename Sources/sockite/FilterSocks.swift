@@ -23,9 +23,13 @@ class FilterSocks {
                     for (qSock, data) in qRes {
                         Log.logInfo("Building question results", consoleOutputPrefix: "FilterSocks")
                         if let sock = resDict[qSock] {
+                            Log.logInfo("Appending to previous report", consoleOutputPrefix: "FilterSocks")
                             let newScore = sock.0 + data.0
                             let newReason = sock.1 + ", " + data.1.joined(separator: ", ")
                             resDict[qSock] = (newScore, newReason)
+                        } else {
+                            Log.logInfo("Building new report", consoleOutputPrefix: "FilterSocks")
+                            resDict[qSock] = (data.0, data.1.joined(separator: ", "))
                         }
                     }
 //                    if let aRes = aRes {
