@@ -143,7 +143,7 @@ class FilterSocks {
     
     // 100% of answers answered by same user
     static func sameAnswerer100(_ items: [QuestionJSON.Item]) -> [Int : (Double, String?)] {
-        if items.count > 4 {
+        if items.count > 4 && items.count == 1 {
             return [:]
         }
         var answerOwners: [Int] = []
@@ -172,7 +172,7 @@ class FilterSocks {
         }
         
         Log.logInfo("sameAnswerer100 failed", consoleOutputPrefix: "FilterSocks")
-        return [answerOwners[0] : (6.0, "100% of answers are answered by same user (user: [\(answerOwners[0])](https://stackoverflow.com/users/\(answerOwners[0])")]
+        return [answerOwners[0] : (6.0, "100% of answers are answered by same user (user: [\(answerOwners[0])](https://stackoverflow.com/users/\(answerOwners[0]))")]
     }
     
     // all questions have an upvote

@@ -17,7 +17,7 @@ class Command {
 
 class CommandService {
     func recieveMsg(_ msg: ChatMessage, _ isEdit: Bool, _ room: ChatRoom) {
-        checkForChooChoo(inMessage: msg)
+        checkForSpecialReplies(inMessage: msg)
         var msgContent: String = msg.content
         if !msgContent.lowercased().starts(with: "@sock") {
             return
