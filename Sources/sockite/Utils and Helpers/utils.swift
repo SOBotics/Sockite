@@ -13,3 +13,12 @@ func checkForSpecialReplies(inMessage msg: ChatMessage) {
         msg.room.postMessage("Finding for some socks to wear")
     }
 }
+
+extension Array where Element: Equatable {
+    func allEqual() -> Bool {
+        if let firstElem = first {
+            return !dropFirst().contains { $0 != firstElem }
+        }
+        return true
+    }
+}

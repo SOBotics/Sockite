@@ -121,9 +121,22 @@ class FilterSocks {
                     continue
                 }
                 if isAccepted {
-                    answerOwners.append(answer.owner!.user_id!)
+                    guard let owner = answer.owner else {
+                        Log.logWarning("answer.owner is nil!", consoleOutputPrefix: "FilterSocks")
+                        continue
+                    }
+                    guard let userId = owner.user_id else {
+                        Log.logWarning("owner.user_id is nil!", consoleOutputPrefix: "FilterSocks")
+                        continue
+                    }
+                    
+                    Log.logInfo("Nothing is nil, appending", consoleOutputPrefix: "FilterSocks")
+                    answerOwners.append(userId)
                 }
             }
+        }
+        if answerOwners.count <= 2 {
+            return [:]
         }
         let counts = answerOwners.reduce(into: [:]) { $0[$1, default: 0] += 1 }
         var possibleSock: [Int : Double] = [:]
@@ -135,7 +148,7 @@ class FilterSocks {
         
         var responseDict: [Int : (Double, String?)] = [:]
         for (acc, score) in possibleSock {
-            responseDict[acc] = (score, "\(score / 6.0 * 100.0)% of accepted answers are answered by same user (user: [\(acc)](https://stackoverflow.com/users/\(acc))")
+            responseDict[acc] = (score, "\(score / 6.0 * 100.0)% of accepted answers are answered by same user")
         }
         
         return responseDict
@@ -155,7 +168,17 @@ class FilterSocks {
             }
             Log.logInfo("item.answers is not nil, iterating", consoleOutputPrefix: "FilterSocks")
             for answer in answers {
-                answerOwners.append(answer.owner!.user_id!)
+                guard let owner = answer.owner else {
+                    Log.logWarning("answer.owner is nil!", consoleOutputPrefix: "FilterSocks")
+                    continue
+                }
+                guard let userId = owner.user_id else {
+                    Log.logWarning("owner.user_id is nil!", consoleOutputPrefix: "FilterSocks")
+                    continue
+                }
+                
+                Log.logInfo("Nothing is nil, appending", consoleOutputPrefix: "FilterSocks")
+                answerOwners.append(userId)
             }
         }
         
@@ -164,15 +187,18 @@ class FilterSocks {
             return [:]
         }
         
-        for answerOwner in answerOwners {
-            if answerOwners[0] != answerOwner {
-                Log.logInfo("sameAnswerer100 passed", consoleOutputPrefix: "FilterSocks")
-                return [:]
-            }
+        if answerOwners.count == 1 {
+            Log.logInfo("sameAnswerer100 passed (1 answer only)", consoleOutputPrefix: "FilterSocks")
+            return [:]
+        }
+        
+        if !answerOwners.allEqual() {
+            Log.logInfo("sameAnswerer100 passed", consoleOutputPrefix: "FilterSocks")
+            return [:]
         }
         
         Log.logInfo("sameAnswerer100 failed", consoleOutputPrefix: "FilterSocks")
-        return [answerOwners[0] : (6.0, "100% of answers are answered by same user (user: [\(answerOwners[0])](https://stackoverflow.com/users/\(answerOwners[0]))")]
+        return [answerOwners[0] : (6.0, "100% of answers are answered by same user")]
     }
     
     // all questions have an upvote
@@ -191,7 +217,7 @@ class FilterSocks {
         }
         
         Log.logInfo("haveUpvote failed")
-        return [-1 : (2.3, "100% of questions have at lease 1 upvote")]
+        return [-1 : (2.3, "100% of questions have at least 1 upvote")]
     }
     
     // ==== ANSWER FILTERS ====

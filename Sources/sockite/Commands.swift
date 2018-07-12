@@ -35,7 +35,7 @@ class CommandService {
                         Log.logInfo("cmd works", consoleOutputPrefix: "CmdService")
                         if msg.user.id == 8449076 {
                             room.postMessage("Don't try to break me...")
-                            continue
+                            return
                         }
                         command.handler(msg, msgParts, room)
                         return
