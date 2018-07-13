@@ -182,13 +182,8 @@ class FilterSocks {
             }
         }
         
-        if answerOwners.isEmpty {
-            Log.logInfo("sameAnswerer100 passed (no answer owners)", consoleOutputPrefix: "FilterSocks")
-            return [:]
-        }
-        
-        if answerOwners.count == 1 {
-            Log.logInfo("sameAnswerer100 passed (1 answer only)", consoleOutputPrefix: "FilterSocks")
+        if answerOwners.count <= 1 {
+            Log.logInfo("sameAnswerer100 passed (to little answers)", consoleOutputPrefix: "FilterSocks")
             return [:]
         }
         
@@ -211,13 +206,40 @@ class FilterSocks {
                 continue
             }
             if upvoteCount <= 0 {
-                Log.logInfo("haveUpvote passed")
+                Log.logInfo("haveUpvote passed", consoleOutputPrefix: "FilterSocks")
                 return [:]
             }
         }
         
-        Log.logInfo("haveUpvote failed")
-        return [-1 : (2.3, "100% of questions have at least 1 upvote")]
+        Log.logInfo("haveUpvote failed", consoleOutputPrefix: "FilterSocks")
+        return [-100 : (2.0, "100% of questions have at least 1 upvote")]
+    }
+    
+    // split votes
+    static func splitVotes(_ items: [QuestionJSON.Item]) throws -> [Int : (Double, String?)] {
+        Log.logInfo("Testing splitVotes", consoleOutputPrefix: "FilterSocks")
+        if items.count <= 1 {
+            Log.logInfo("splitVotes passed (to little answers)", consoleOutputPrefix: "FilterSocks")
+            return [:]
+        }
+        var splitVoteCount = 0
+        for item in items {
+            guard let upvoteCount = item.up_vote_count, let downvoteCount =  item.down_vote_count else {
+                Log.logWarning("item.up_vote_count or item.down_vote_count is nil!")
+                broadcastMessage("Error occured while proccesing splitVotes, see the log for more details (@paper)")
+                continue
+            }
+            if upvoteCount == 1 && downvoteCount >= 2 {
+                splitVoteCount += 1
+            }
+        }
+        if (Double(splitVoteCount) / Double(items.count)) > 0.7 {
+            Log.logInfo("splitVotes failed", consoleOutputPrefix: "FilterSocks")
+            return [-100 : (1.0, "\(splitVoteCount / items.count * 100)% of questions are split voted")]
+        }
+        
+        Log.logInfo("splitVotes passed", consoleOutputPrefix: "FilterSocks")
+        return [:]
     }
     
     // ==== ANSWER FILTERS ====

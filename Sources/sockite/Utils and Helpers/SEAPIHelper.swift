@@ -45,7 +45,7 @@ class SEAPIHelper {
         let session = URLSession(configuration: .default)
         
         if var urlComponents = URLComponents(string: "https://api.stackexchange.com/2.2/users/\(user)/questions") {
-            urlComponents.query = "pagesize=100&order=desc&sort=activity&site=stackoverflow&filter=!0V-ZwUEu0wMbto7XHeIh96H_K&key=OJ*iP6ih)G0W1CQFgKllSg(("
+            urlComponents.query = "pagesize=100&order=desc&sort=activity&site=stackoverflow&filter=!)rFTNOX9*UlEK6EnL*f*&key=OJ*iP6ih)G0W1CQFgKllSg(("
             guard let url = urlComponents.url else {
                 Log.handle(error: "Unable to build API URL!", consoleOutputPrefix: "SEAPIHelper")
                 return
