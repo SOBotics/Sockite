@@ -58,6 +58,6 @@ class Checkusers: Command {
             }
         })
         
-        self.description = "checks for illegal activity between two users"
+        self.description = "checks for suspicious activity between two users"
     }
 }

@@ -50,8 +50,4 @@ struct Log {
             Log.log("[INFO] \(str)")
         }
     }
-    
-    private static func writeToLogFile(_ str: String) {
-        
-    }
 }
