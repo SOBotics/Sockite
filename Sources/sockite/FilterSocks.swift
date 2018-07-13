@@ -183,7 +183,7 @@ class FilterSocks {
         }
         
         if answerOwners.count <= 1 {
-            Log.logInfo("sameAnswerer100 passed (to little answers)", consoleOutputPrefix: "FilterSocks")
+            Log.logInfo("sameAnswerer100 passed (too little answers)", consoleOutputPrefix: "FilterSocks")
             return [:]
         }
         
@@ -219,7 +219,7 @@ class FilterSocks {
     static func splitVotes(_ items: [QuestionJSON.Item]) throws -> [Int : (Double, String?)] {
         Log.logInfo("Testing splitVotes", consoleOutputPrefix: "FilterSocks")
         if items.count <= 1 {
-            Log.logInfo("splitVotes passed (to little answers)", consoleOutputPrefix: "FilterSocks")
+            Log.logInfo("splitVotes passed (too little answers)", consoleOutputPrefix: "FilterSocks")
             return [:]
         }
         var splitVoteCount = 0
