@@ -48,11 +48,11 @@
       },
       {
         "package": "SwiftChatSE",
-        "repositoryURL": "https://github.com/SOBotics/SwiftChatSE.git",
+        "repositoryURL": "https://github.com/SOBotics/SwiftChatSE",
         "state": {
           "branch": null,
-          "revision": "1c794c1020ed348f4c93c24ea55243bef7da3fbb",
-          "version": "5.0.6"
+          "revision": "71c350f29f5a1ddd248b6c0f72b3fb39cab7c177",
+          "version": "5.0.7"
         }
       },
       {

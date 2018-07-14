@@ -7,6 +7,7 @@ class Command {
     var handler: (ChatMessage, [String], ChatRoom) -> ()
     var description: String?
     var reply = false
+    var requiredPrivileges: Privileges = .nothing
     
     init(syntax: [String], args: Int, exec: @escaping (ChatMessage, [String], ChatRoom) -> ()) {
         self.syntax = syntax

@@ -7,6 +7,9 @@ class SQLiteHelper {
     private let tumbleweedBadge = Table("tumbleweedBadge")
     private let userId = Expression<String>("userId")
     
+    private let privileges = Table("privileges")
+    private let privilege = Expression<Int>("privilege")
+    
     func connect() {
         do {
             db = try Connection(dataDir + "db.sqlite3")
@@ -16,11 +19,16 @@ class SQLiteHelper {
             return
         }
         do {
-            try db!.run(tumbleweedBadge.create { t in
+            try db!.run(tumbleweedBadge.create(ifNotExists: true) { t in
                 t.column(userId)
             })
+            
+            try db!.run(privileges.create(ifNotExists: true) { t in
+                t.column(userId)
+                t.column(privilege)
+            })
         } catch {
-            Log.logWarning("Unable to create table, possibly because table already exists", consoleOutputPrefix: "SQLite")
+            Log.logWarning("Error occured while initializing database connection: \(error.localizedDescription)", consoleOutputPrefix: "SQLite")
         }
     }
     
@@ -52,6 +60,23 @@ class SQLiteHelper {
             Log.logInfo("User id inserted into scanned database", consoleOutputPrefix: "SQLite")
         } catch {
             Log.handle(error: "Error while inserting checked user into database: \(error.localizedDescription)", consoleOutputPrefix: "SQLite")
+        }
+    }
+    
+    func give(user: String, privilege userPriv: Privileges) {
+        if db == nil {
+            Log.logWarning("Database not connected, now attempting to connect")
+            self.connect()
+        }
+        do {
+            for row in try db!.prepare(privileges) {
+                if row[userId] == user {
+                    return
+                }
+            }
+            try db!.run(privileges.insert(userId <- user, privilege <- userPriv.rawValue))
+        } catch {
+            Log.handle(error: "Error while giving user privileges: \(error.localizedDescription)", consoleOutputPrefix: "SQLite")
         }
     }
     

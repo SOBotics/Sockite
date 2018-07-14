@@ -11,6 +11,7 @@
 		E87EE41320E8D91B00AE5E3F /* UserScanQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87EE41120E8D89400AE5E3F /* UserScanQueue.swift */; };
 		E87EE41620E8FD7A00AE5E3F /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87EE41420E8FD6C00AE5E3F /* Queue.swift */; };
 		E8DF439420F8A31D0002191E /* Kill.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DF439220F8A31A0002191E /* Kill.swift */; };
+		E8DF439620F8A6640002191E /* Privileges.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DF439520F8A6640002191E /* Privileges.swift */; };
 		OBJ_154 /* api.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* api.c */; };
 		OBJ_155 /* emitter.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_82 /* emitter.c */; };
 		OBJ_156 /* parser.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_83 /* parser.c */; };
@@ -199,6 +200,7 @@
 		E87EE41120E8D89400AE5E3F /* UserScanQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserScanQueue.swift; sourceTree = "<group>"; };
 		E87EE41420E8FD6C00AE5E3F /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		E8DF439220F8A31A0002191E /* Kill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kill.swift; sourceTree = "<group>"; };
+		E8DF439520F8A6640002191E /* Privileges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Privileges.swift; sourceTree = "<group>"; };
 		OBJ_10 /* Creds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creds.swift; sourceTree = "<group>"; };
 		OBJ_100 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		OBJ_101 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
@@ -666,6 +668,7 @@
 				OBJ_13 /* RedundaPingDelegate.swift */,
 				OBJ_14 /* ReportService.swift */,
 				OBJ_23 /* main.swift */,
+				E8DF439520F8A6640002191E /* Privileges.swift */,
 			);
 			name = sockite;
 			path = Sources/sockite;
@@ -990,6 +993,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				E8DF439620F8A6640002191E /* Privileges.swift in Sources */,
 				OBJ_154 /* api.c in Sources */,
 				OBJ_155 /* emitter.c in Sources */,
 				OBJ_156 /* parser.c in Sources */,
