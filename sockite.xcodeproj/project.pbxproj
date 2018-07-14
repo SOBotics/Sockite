@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E82938F820F9B4DF00833A27 /* MyPrivileges.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82938F620F9B4CF00833A27 /* MyPrivileges.swift */; };
 		E87EE41020E8B5E300AE5E3F /* Quota.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87EE40E20E8B55B00AE5E3F /* Quota.swift */; };
 		E87EE41320E8D91B00AE5E3F /* UserScanQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87EE41120E8D89400AE5E3F /* UserScanQueue.swift */; };
 		E87EE41620E8FD7A00AE5E3F /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87EE41420E8FD6C00AE5E3F /* Queue.swift */; };
@@ -196,6 +197,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E82938F620F9B4CF00833A27 /* MyPrivileges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPrivileges.swift; sourceTree = "<group>"; };
 		E87EE40E20E8B55B00AE5E3F /* Quota.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quota.swift; sourceTree = "<group>"; };
 		E87EE41120E8D89400AE5E3F /* UserScanQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserScanQueue.swift; sourceTree = "<group>"; };
 		E87EE41420E8FD6C00AE5E3F /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
@@ -477,6 +479,7 @@
 				OBJ_12 /* Help.swift */,
 				E87EE40E20E8B55B00AE5E3F /* Quota.swift */,
 				E8DF439220F8A31A0002191E /* Kill.swift */,
+				E82938F620F9B4CF00833A27 /* MyPrivileges.swift */,
 			);
 			path = Commands;
 			sourceTree = "<group>";
@@ -1177,6 +1180,7 @@
 				OBJ_319 /* LogHelper.swift in Sources */,
 				OBJ_320 /* SEAPIHelper.swift in Sources */,
 				OBJ_321 /* SQLiteHelper.swift in Sources */,
+				E82938F820F9B4DF00833A27 /* MyPrivileges.swift in Sources */,
 				OBJ_322 /* decodables.swift in Sources */,
 				OBJ_323 /* utils.swift in Sources */,
 			);
