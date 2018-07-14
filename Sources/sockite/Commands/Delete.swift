@@ -13,5 +13,6 @@ class Delete: Command {
         
         self.reply = true
         self.description = "deletes the given message by Sockite"
+        self.requiredPrivileges = .admin
     }
 }

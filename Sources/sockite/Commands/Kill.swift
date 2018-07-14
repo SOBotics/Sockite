@@ -9,5 +9,6 @@ class Kill: Command {
             exit(0)
         })
         self.description = "stop the bot from running"
+        self.requiredPrivileges = .admin
     }
 }
