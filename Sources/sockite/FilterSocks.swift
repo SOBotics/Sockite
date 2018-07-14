@@ -70,7 +70,7 @@ class FilterSocks {
 
             // START FILTERING
             var socks: [Int: [(Double, String?)]] = [:]
-            let filters = [sameAnswerer75, sameAnswerer100, haveUpvote]
+            let filters = [sameAnswerer75, sameAnswerer100, haveUpvote, splitVotes]
             do {
                 for filter in filters {
                     let filterRes = try filter(items)

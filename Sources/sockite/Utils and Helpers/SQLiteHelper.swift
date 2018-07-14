@@ -71,6 +71,8 @@ class SQLiteHelper {
         do {
             for row in try db!.prepare(privileges) {
                 if row[userId] == user {
+                    let toBeGiven = privileges.filter(userId == user)
+                    try db!.run(toBeGiven.update(privilege <- userPriv.rawValue))
                     return
                 }
             }
@@ -78,6 +80,23 @@ class SQLiteHelper {
         } catch {
             Log.handle(error: "Error while giving user privileges: \(error.localizedDescription)", consoleOutputPrefix: "SQLite")
         }
+    }
+    
+    func getPrivilegeLevel(ofUser user: String) -> Privileges {
+        if db == nil {
+            Log.logWarning("Database not connected, now attempting to connect")
+            self.connect()
+        }
+        do {
+            for row in try db!.prepare(privileges) {
+                if row[userId] == user {
+                    return Privileges(rawValue: row[privilege])!
+                }
+            }
+        } catch {
+            Log.handle(error: "Error while getting user privileges: \(error.localizedDescription)", consoleOutputPrefix: "SQLite")
+        }
+        return .nothing
     }
     
     func disconnect() {
