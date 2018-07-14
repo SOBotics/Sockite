@@ -18,6 +18,12 @@ class PrivilegeManager {
     }
     
     static func assertPrivilegeLevel(ofChatUser user: ChatUser, isHigherThan privilege: Privileges) -> Bool {
+        if user.isMod || user.isRO {
+            if Privileges.admin.rawValue < privilege.rawValue {
+                return false
+            }
+            return true
+        }
         if PrivilegeManager.checkPrivilegeLevel(ofChatUser: user).rawValue >= privilege.rawValue {
             return true
         }

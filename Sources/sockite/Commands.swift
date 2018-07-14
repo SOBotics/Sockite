@@ -38,6 +38,9 @@ class CommandService {
                             room.postMessage("Don't try to break me...")
                             return
                         }
+                        if !PrivilegeManager.assertPrivilegeLevel(ofChatUser: msg.user, isHigherThan: command.requiredPrivileges) {
+                            room.postMessage(":\(msg.id!) You don't have enough privileges!")
+                        }
                         command.handler(msg, msgParts, room)
                         return
                     }

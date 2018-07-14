@@ -5,7 +5,7 @@ class MyPrivileges: Command {
             if priv == .nothing {
                 room.postMessage(":\(msg.id!) You don't have any privileges.")
             } else {
-                room.postMessage(":\(msg.id!) You have the privilege \(priv).")
+                room.postMessage(":\(msg.id!) You have the privilege \"\(priv)\".")
             }
         })
         self.description = "to get your privileges"
