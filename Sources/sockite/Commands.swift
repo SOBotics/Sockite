@@ -39,7 +39,8 @@ class CommandService {
                             return
                         }
                         if !PrivilegeManager.assertPrivilegeLevel(ofChatUser: msg.user, isHigherThan: command.requiredPrivileges) {
-                            room.postMessage(":\(msg.id!) You don't have enough privileges!")
+                            Log.logWarning("User \(msg.user.id) tried to execute command \(command.syntax.first!) but did not have enough privileges!", consoleOutputPrefix: "CmdService")
+                            room.postMessage(":\(msg.id!) You don't have enough privileges! The privilege level \(command.requiredPrivileges) is required. Ping paper1111 if you require them.")
                         }
                         command.handler(msg, msgParts, room)
                         return

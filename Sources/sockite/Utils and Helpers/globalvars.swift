@@ -3,7 +3,7 @@ import Darwin
 // array of commands
 let commands: [Command] = [Alive(), Checkusers(), Say(), Help(), Commands(), Checkuser(), Delete(), Quota(), Kill(), MyPrivileges()]
 
-let sockitePrefix = "[ [Sockite](https://github.com/SOBotics/Sockite) ]"
+let sockitePrefix = "[ [Sockite](https://git.io/fNmle) ]"
 
 var quota = 10000 {
     didSet {
