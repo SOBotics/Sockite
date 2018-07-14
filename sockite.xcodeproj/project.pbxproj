@@ -11,8 +11,8 @@
 		E87EE41020E8B5E300AE5E3F /* Quota.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87EE40E20E8B55B00AE5E3F /* Quota.swift */; };
 		E87EE41320E8D91B00AE5E3F /* UserScanQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87EE41120E8D89400AE5E3F /* UserScanQueue.swift */; };
 		E87EE41620E8FD7A00AE5E3F /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87EE41420E8FD6C00AE5E3F /* Queue.swift */; };
+		E895240220F9B7AE006394C8 /* Privileges.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DF439520F8A6640002191E /* Privileges.swift */; };
 		E8DF439420F8A31D0002191E /* Kill.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DF439220F8A31A0002191E /* Kill.swift */; };
-		E8DF439620F8A6640002191E /* Privileges.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DF439520F8A6640002191E /* Privileges.swift */; };
 		OBJ_154 /* api.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* api.c */; };
 		OBJ_155 /* emitter.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_82 /* emitter.c */; };
 		OBJ_156 /* parser.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_83 /* parser.c */; };
@@ -996,7 +996,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				E8DF439620F8A6640002191E /* Privileges.swift in Sources */,
 				OBJ_154 /* api.c in Sources */,
 				OBJ_155 /* emitter.c in Sources */,
 				OBJ_156 /* parser.c in Sources */,
@@ -1176,6 +1175,7 @@
 				OBJ_315 /* CommandsCommand.swift in Sources */,
 				OBJ_316 /* Delete.swift in Sources */,
 				OBJ_317 /* globalvars.swift in Sources */,
+				E895240220F9B7AE006394C8 /* Privileges.swift in Sources */,
 				OBJ_318 /* main.swift in Sources */,
 				OBJ_319 /* LogHelper.swift in Sources */,
 				OBJ_320 /* SEAPIHelper.swift in Sources */,
