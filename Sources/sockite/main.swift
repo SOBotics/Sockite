@@ -31,8 +31,11 @@ for requiredRoom in creds.rooms {
 
 Log.logInfo("Initializing Redunda...")
 let pingService = RedundaPingService(key: creds.redunda_key, version: "0.1.0")
+if CommandLine.arguments.contains("--dev") {
+    Log.log("[INFO] Launching in development mode, Redunda should not be pinged", withColor: .green)
+    pingService.debug = true
+}
 pingService.delegate = RedundaPingDelegate()
-pingService.ping()
 pingService.startPinging()
 
 Log.logInfo("Initializing network connections...")
