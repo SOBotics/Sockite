@@ -3,7 +3,8 @@
 echo "Building product..."
 swift build
 echo "Starting Sockite..."
-.build/debug/sockite
+REV="$(git rev-parse --short HEAD)"
+.build/debug/sockite --rev $REV
 EXIT_CODE=$?
 
 while :; do
@@ -12,11 +13,11 @@ while :; do
         exit
     elif [ $EXIT_CODE -eq 5 ]; then
         echo "Reboot requested from chat room"
-        .build/debug/sockite --reboot
+        .build/debug/sockite --reboot --rev $REV
     else
         echo ""
         echo "An error occurred, rebooting Sockite"
         echo ""
-        .build/debug/sockite --err
+        .build/debug/sockite --err --rev $REV
     fi
 done
