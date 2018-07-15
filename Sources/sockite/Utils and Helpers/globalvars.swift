@@ -1,7 +1,7 @@
 import Darwin
 
 // array of commands
-let commands: [Command] = [Alive(), Checkusers(), Say(), Help(), Commands(), Checkuser(), Delete(), Quota(), Kill(), MyPrivileges()]
+let commands: [Command] = [Alive(), Checkusers(), Say(), Help(), Commands(), Checkuser(), Delete(), Quota(), Kill(), MyPrivileges(), Reboot()]
 
 let sockitePrefix = "[ [Sockite](https://git.io/fNmle) ]"
 
