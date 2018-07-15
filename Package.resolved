@@ -1,0 +1,79 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Clibwebsockets",
+        "repositoryURL": "git://github.com/NobodyNada/Clibwebsockets",
+        "state": {
+          "branch": null,
+          "revision": "0b1eb3ad0f691d7d476f1e5dc89ed7cc3b89583d",
+          "version": "1.2.0"
+        }
+      },
+      {
+        "package": "COpenSSL",
+        "repositoryURL": "git://github.com/NobodyNada/COpenSSL",
+        "state": {
+          "branch": null,
+          "revision": "b69558eb8a014e12577626f34b8367b523a2ab26",
+          "version": "0.0.0"
+        }
+      },
+      {
+        "package": "CSQLite",
+        "repositoryURL": "git://github.com/stephencelis/CSQLite",
+        "state": {
+          "branch": null,
+          "revision": "9106e983d5e3d5149ee35281ec089484b0def018",
+          "version": "0.0.3"
+        }
+      },
+      {
+        "package": "Rainbow",
+        "repositoryURL": "https://github.com/onevcat/Rainbow",
+        "state": {
+          "branch": null,
+          "revision": "df197437d8acefb2ae01ab073be1d531fe7781ef",
+          "version": "2.1.0"
+        }
+      },
+      {
+        "package": "SQLite.swift",
+        "repositoryURL": "https://github.com/stephencelis/SQLite.swift.git",
+        "state": {
+          "branch": null,
+          "revision": "210098546d59678f720e4ef67f8b562acfebbdb0",
+          "version": "0.11.5"
+        }
+      },
+      {
+        "package": "SwiftChatSE",
+        "repositoryURL": "https://github.com/SOBotics/SwiftChatSE",
+        "state": {
+          "branch": null,
+          "revision": "71c350f29f5a1ddd248b6c0f72b3fb39cab7c177",
+          "version": "5.0.7"
+        }
+      },
+      {
+        "package": "swiftredunda",
+        "repositoryURL": "https://github.com/SOBotics/SwiftRedunda.git",
+        "state": {
+          "branch": null,
+          "revision": "7714992103dcd46c5728af51de9d179fe4fac0d8",
+          "version": "0.1.6"
+        }
+      },
+      {
+        "package": "Yams",
+        "repositoryURL": "https://github.com/jpsim/Yams.git",
+        "state": {
+          "branch": null,
+          "revision": "618582e09699b577fa183bab7d88e3ee7d9a1d19",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
