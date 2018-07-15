@@ -16,7 +16,7 @@ let creds = try! YAMLDecoder().decode(Creds.self, from: String(contentsOf: URL(f
 Log.logInfo("Initializing globalvars...")
 dataDir = creds.data_dir
 if CommandLine.arguments.contains("--rev") {
-    rev = CommandLine.arguments[CommandLine.arguments.index(of: "--rev") + 1]
+    rev = CommandLine.arguments[CommandLine.arguments.index(of: "--rev")! + 1]
 }
 
 Log.logInfo("Initializing logfile...")
