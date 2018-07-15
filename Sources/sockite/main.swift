@@ -11,7 +11,7 @@ if CommandLine.arguments.contains("--reboot") {
     Log.log("Welcome to Sockite! Now starting up!", withColor: .lightMagenta)
 }
 Log.logInfo("Decoding credentials...")
-let creds = try YAMLDecoder().decode(Creds.self, from: String(contentsOf: URL(fileURLWithPath: "creds.yml"), encoding: .utf8))
+let creds = try! YAMLDecoder().decode(Creds.self, from: String(contentsOf: URL(fileURLWithPath: "creds.yml"), encoding: .utf8))
 
 Log.logInfo("Initializing globalvars...")
 dataDir = creds.data_dir
