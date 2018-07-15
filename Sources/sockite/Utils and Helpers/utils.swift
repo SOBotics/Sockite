@@ -2,13 +2,15 @@ import SwiftChatSE
 
 func broadcastMessage(_ msg: String, force: Bool = false) {
     if !force {
-        if !pingService.shouldStandby {
+        if !pingService.shouldStandby() {
             for room in rooms {
                 room.postMessage(msg)
             }
         }
     } else {
-        room.postMessage(msg)
+        for room in rooms {
+            room.postMessage(msg)
+        }
     }
 }
 
