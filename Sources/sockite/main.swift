@@ -59,6 +59,8 @@ if CommandLine.arguments.contains("--reboot") {
     broadcastMessage("\(sockitePrefix) rebooted (running on \(location))")
 } else if CommandLine.arguments.contains("--err") {
     broadcastMessage("\(sockitePrefix) recovered from error (running on \(location))")
+} else if pingService.shouldStandby() {
+    broadcastMessage("\(sockitePrefix) started in standby mode (running on \(location))", force: true)
 } else {
     broadcastMessage("\(sockitePrefix) started (running on \(location))")
 }
