@@ -11,6 +11,7 @@
 		E87EE41020E8B5E300AE5E3F /* Quota.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87EE40E20E8B55B00AE5E3F /* Quota.swift */; };
 		E87EE41320E8D91B00AE5E3F /* UserScanQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87EE41120E8D89400AE5E3F /* UserScanQueue.swift */; };
 		E87EE41620E8FD7A00AE5E3F /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87EE41420E8FD6C00AE5E3F /* Queue.swift */; };
+		E88990F420FB28A900B0E52C /* Reboot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88990F320FB28A900B0E52C /* Reboot.swift */; };
 		E895240220F9B7AE006394C8 /* Privileges.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DF439520F8A6640002191E /* Privileges.swift */; };
 		E8DF439420F8A31D0002191E /* Kill.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DF439220F8A31A0002191E /* Kill.swift */; };
 		OBJ_154 /* api.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* api.c */; };
@@ -201,6 +202,7 @@
 		E87EE40E20E8B55B00AE5E3F /* Quota.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quota.swift; sourceTree = "<group>"; };
 		E87EE41120E8D89400AE5E3F /* UserScanQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserScanQueue.swift; sourceTree = "<group>"; };
 		E87EE41420E8FD6C00AE5E3F /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		E88990F320FB28A900B0E52C /* Reboot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reboot.swift; sourceTree = "<group>"; };
 		E8DF439220F8A31A0002191E /* Kill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kill.swift; sourceTree = "<group>"; };
 		E8DF439520F8A6640002191E /* Privileges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Privileges.swift; sourceTree = "<group>"; };
 		OBJ_10 /* Creds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creds.swift; sourceTree = "<group>"; };
@@ -480,6 +482,7 @@
 				E87EE40E20E8B55B00AE5E3F /* Quota.swift */,
 				E8DF439220F8A31A0002191E /* Kill.swift */,
 				E82938F620F9B4CF00833A27 /* MyPrivileges.swift */,
+				E88990F320FB28A900B0E52C /* Reboot.swift */,
 			);
 			path = Commands;
 			sourceTree = "<group>";
@@ -1180,6 +1183,7 @@
 				OBJ_319 /* LogHelper.swift in Sources */,
 				OBJ_320 /* SEAPIHelper.swift in Sources */,
 				OBJ_321 /* SQLiteHelper.swift in Sources */,
+				E88990F420FB28A900B0E52C /* Reboot.swift in Sources */,
 				E82938F820F9B4DF00833A27 /* MyPrivileges.swift in Sources */,
 				OBJ_322 /* decodables.swift in Sources */,
 				OBJ_323 /* utils.swift in Sources */,
