@@ -3,7 +3,13 @@ import SwiftChatSE
 import SwiftRedunda
 import Yams
 
-Log.log("Welcome to Sockite! Now starting up!", withColor: .lightMagenta)
+if CommandLine.arguments.contains("--reboot") {
+    Log.log("Rebooted from command", withColor: .lightMagenta)
+} else if CommandLine.arguments.contains("--err") {
+    Log.log("Recovering from error", withColor: .lightMagenta)
+} else {
+    Log.log("Welcome to Sockite! Now starting up!", withColor: .lightMagenta)
+}
 Log.logInfo("Decoding credentials...")
 let creds = try YAMLDecoder().decode(Creds.self, from: String(contentsOf: URL(fileURLWithPath: "creds.yml"), encoding: .utf8))
 
@@ -46,7 +52,13 @@ sqliteHelper.connect()
 sqliteHelper.give(user: "7347933", privilege: .admin)
 location = pingService.getLocation()
 Log.logInfo("Sockite started!")
-broadcastMessage("\(sockitePrefix) started (running on \(location))")
+if CommandLine.arguments.contains("--reboot") {
+    broadcastMessage("\(sockitePrefix) rebooted (running on \(location))")
+} else if CommandLine.arguments.contains("--err") {
+    broadcastMessage("\(sockitePrefix) recovered from error (running on \(location))")
+} else {
+    broadcastMessage("\(sockitePrefix) started (running on \(location))")
+}
 Log.logInfo("Starting sock reporting service...")
 let reportService = ReportService()
 reportService.startScanning()
