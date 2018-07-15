@@ -18,7 +18,7 @@ var quota = 10000 {
 
 var backoff = false
 
-var version = "<undefined>"
+var rev = "unknown"
 var location = "<undefined>"
 
 var dataDir = "<undefined>" {

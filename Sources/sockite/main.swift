@@ -15,6 +15,9 @@ let creds = try! YAMLDecoder().decode(Creds.self, from: String(contentsOf: URL(f
 
 Log.logInfo("Initializing globalvars...")
 dataDir = creds.data_dir
+if CommandLine.arguments.contains("--rev") {
+    rev = CommandLine.arguments[CommandLine.arguments.index(of: "--rev") + 1]
+}
 
 Log.logInfo("Initializing logfile...")
 try? FileManager.default.removeItem(atPath: dataDir + "logfile.log") // reset logfile
@@ -36,7 +39,7 @@ for requiredRoom in creds.rooms {
 }
 
 Log.logInfo("Initializing Redunda...")
-let pingService = RedundaPingService(key: creds.redunda_key, version: "0.1.0")
+let pingService = RedundaPingService(key: creds.redunda_key, version: rev)
 if CommandLine.arguments.contains("--dev") {
     Log.log("[INFO] Launching in development mode, Redunda should not be pinged", withColor: .green)
     pingService.debug = true
