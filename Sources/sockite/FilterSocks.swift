@@ -1,4 +1,5 @@
 import Foundation
+import SwiftChatSE
 
 class FilterSocks {
     
@@ -70,7 +71,7 @@ class FilterSocks {
 
             // START FILTERING
             var socks: [Int: [(Double, String?)]] = [:]
-            let filters = [sameAnswerer75, sameAnswerer100, haveUpvote, splitVotes]
+            let filters = [sameAnswerer75, sameAnswerer100, haveUpvote, splitVotes, similarUsername]
             do {
                 for filter in filters {
                     let filterRes = try filter(items)
@@ -239,6 +240,24 @@ class FilterSocks {
         }
         
         Log.logInfo("splitVotes passed", consoleOutputPrefix: "FilterSocks")
+        return [:]
+    }
+    
+    // username of question and answer similar
+    static func similarUsername(_ items: [QuestionJSON.Item]) throws -> [Int : (Double, String?)] {
+        Log.logInfo("Testing similarUsername", consoleOutputPrefix: "FilterSocks")
+        for item in items {
+            guard let answers = item.answers else {
+                continue
+            }
+            for answer in answers {
+                Log.logInfo("distance: \(Levenshtein.distanceBetween(item.owner!.display_name!, and: answer.owner!.display_name!))")
+                if Levenshtein.distanceBetween(item.owner!.display_name!, and: answer.owner!.display_name!) <= 3 {
+                    Log.logInfo("similarUsername failed", consoleOutputPrefix: "FilterSocks")
+                    return [answer.owner!.user_id! : (4.0, "Question username similar to username in answer")]
+                }
+            }
+        }
         return [:]
     }
     
