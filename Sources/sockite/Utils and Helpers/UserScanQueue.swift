@@ -26,7 +26,11 @@ class UserScanQueue {
                 Log.logInfo("Possible socks of user \(strUserId) found!", consoleOutputPrefix: "ReportService|UserScanQueue")
                 broadcastMessage("\(sockitePrefix) Possible socks of user [\(strUserId)](https://stackoverflow.com/u/\(strUserId))")
                 for (user, (score, reasons)) in res {
-                    broadcastMessage("User [\(user)](https://stackoverflow.com/u/\(user)): **\(reasons)**; **\(score)**")
+                    if user != -100 {
+                        broadcastMessage("User [\(user)](https://stackoverflow.com/u/\(user)): **\(reasons)**; **\(score)**")
+                    } else {
+                        broadcastMessage("Unkown user: **\(reasons)**; **\(score)**")
+                    }
                 }
             } else {
                 Log.logInfo("User \(strUserId) scanned, no socks found", consoleOutputPrefix: "ReportService|UserScanQueue")
