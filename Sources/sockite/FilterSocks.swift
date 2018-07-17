@@ -252,7 +252,10 @@ class FilterSocks {
             }
             for answer in answers {
                 Log.logInfo("distance: \(Levenshtein.distanceBetween(item.owner!.display_name!, and: answer.owner!.display_name!))")
-                if Levenshtein.distanceBetween(item.owner!.display_name!, and: answer.owner!.display_name!) <= 3 {
+                if Levenshtein.distanceBetween(item.owner!.display_name!, and: answer.owner!.display_name!) <= 2 {
+                    if item.owner!.user_id! == answer.owner!.user_id! {
+                        continue
+                    }
                     Log.logInfo("similarUsername failed", consoleOutputPrefix: "FilterSocks")
                     return [answer.owner!.user_id! : (4.0, "Question username similar to username in answer")]
                 }
