@@ -4,7 +4,7 @@ class SQLiteHelper {
     
     private var db: Connection? = nil
     
-    private let tumbleweedBadge = Table("tumbleweedBadge")
+    private let mortarboardBadge = Table("mortarboardBadge")
     private let userId = Expression<String>("userId")
     
     private let privileges = Table("privileges")
@@ -19,7 +19,7 @@ class SQLiteHelper {
             return
         }
         do {
-            try db!.run(tumbleweedBadge.create(ifNotExists: true) { t in
+            try db!.run(mortarboardBadge.create(ifNotExists: true) { t in
                 t.column(userId)
             })
             
@@ -38,7 +38,7 @@ class SQLiteHelper {
             self.connect()
         }
         do {
-            for dbUser in try db!.prepare(tumbleweedBadge) {
+            for dbUser in try db!.prepare(mortarboardBadge) {
                 if String(user.user_id!) == dbUser[userId] {
                     return true
                 }
@@ -56,7 +56,7 @@ class SQLiteHelper {
         }
         do {
             Log.logInfo("Inserting user id into scanned database", consoleOutputPrefix: "SQLite")
-            try db!.run(tumbleweedBadge.insert(userId <- uid))
+            try db!.run(mortarboardBadge.insert(userId <- uid))
             Log.logInfo("User id inserted into scanned database", consoleOutputPrefix: "SQLite")
         } catch {
             Log.handle(error: "Error while inserting checked user into database: \(error.localizedDescription)", consoleOutputPrefix: "SQLite")

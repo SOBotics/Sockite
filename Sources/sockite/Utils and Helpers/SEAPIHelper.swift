@@ -5,7 +5,7 @@ class SEAPIHelper {
         var dataTask: URLSessionDataTask?
         let session = URLSession(configuration: .default)
         
-        if var urlComponents = URLComponents(string: "https://api.stackexchange.com/2.2/badges/63/recipients") {
+        if var urlComponents = URLComponents(string: "https://api.stackexchange.com/2.2/badges/144/recipients") {
             urlComponents.query = "site=stackoverflow&key=OJ*iP6ih)G0W1CQFgKllSg(("
             guard let url = urlComponents.url else {
                 Log.handle(error: "Unable to build API URL!", consoleOutputPrefix: "SEAPIHelper")
