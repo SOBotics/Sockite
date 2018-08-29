@@ -4,7 +4,8 @@ class Threads: Command {
     init() {
         super.init(syntax: ["threads"], args: 1, exec: { msg, _, room in
             let task = Process()
-            try! task.launchPath = String(contentsOf: URL(fileURLWithPath: "proc.sh"), encoding: .utf8)
+            task.launchPath = "/bin/bash"
+            task.arguments = ["-c", "ps -T"]
             
             let pipe = Pipe()
             task.standardOutput = pipe
