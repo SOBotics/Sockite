@@ -1,13 +1,19 @@
-// swift-tools-version:3.2
+// swift-tools-version:4.1
 import PackageDescription
 
 let package = Package(
     name: "sockite",
     dependencies: [
-        .Package(url: "https://github.com/SOBotics/SwiftChatSE", majorVersion: 5),
-        .Package(url: "https://github.com/SOBotics/SwiftRedunda.git", majorVersion: 0, minor: 1),
-        .Package(url: "https://github.com/jpsim/Yams.git", majorVersion: 1),
-        .Package(url: "https://github.com/onevcat/Rainbow", majorVersion: 2),
-        .Package(url: "https://github.com/stephencelis/SQLite.swift.git", majorVersion: 0, minor: 11)
+        .package(url: "https://github.com/SOBotics/SwiftChatSE.git", from: "5.0.0"),
+        .package(url: "https://github.com/SOBotics/SwiftRedunda.git", .upToNextMinor(from: "0.1.0")),
+        .package(url: "https://github.com/jpsim/Yams.git", from: "1.0.0"),
+        .package(url: "https://github.com/onevcat/Rainbow.git", from: "3.0.0"),
+        .package(url: "https://github.com/stephencelis/SQLite.swift.git", .upToNextMinor(from: "0.11.0"))
+    ],
+    targets: [
+        .target(
+            name: "sockite",
+            dependencies: ["SwiftChatSE", "SwiftRedunda", "Yams", "Rainbow", "SQLite"]
+        )
     ]
 )
