@@ -28,7 +28,14 @@ let commandService = CommandService()
 
 Log.logInfo("Starting chat service...")
 let client = Client()
-try! client.login(email: creds.email, password: creds.password)
+do {
+     try client.login(email: creds.email, password: creds.password)
+} catch Client.LoginError.loginFailed {
+    Log.handle(error: "Cannot log in to chat service, maybe the login credentials were wrong or we were presented with a CAPTCHA")
+    exit(0)
+} catch {
+    exit(1)
+}
 
 var rooms: [ChatRoom] = []
 

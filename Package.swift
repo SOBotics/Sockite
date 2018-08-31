@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "sockite",
     dependencies: [
-        .package(url: "https://github.com/SOBotics/SwiftChatSE.git", from: "5.0.0"),
+        .package(url: "https://github.com/SOBotics/SwiftChatSE.git", .exact("5.0.7")),
         .package(url: "https://github.com/SOBotics/SwiftRedunda.git", .upToNextMinor(from: "0.1.0")),
         .package(url: "https://github.com/jpsim/Yams.git", from: "1.0.0"),
         .package(url: "https://github.com/onevcat/Rainbow.git", from: "3.0.0"),
