@@ -55,7 +55,7 @@ pingService.delegate = RedundaPingDelegate()
 pingService.startPinging()
 
 Log.logInfo("Initializing network connections...")
-Thread.sleep(forTimeInterval: 10)
+Thread.sleep(forTimeInterval: 3)
 Log.logInfo("Connecting database...")
 let sqliteHelper = SQLiteHelper()
 sqliteHelper.connect()
