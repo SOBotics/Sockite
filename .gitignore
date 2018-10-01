@@ -3,4 +3,5 @@
 /Packages
 *.resolved
 creds.yml
+creds.json
 *.xcodeproj

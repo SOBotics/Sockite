@@ -1,4 +1,4 @@
-import Darwin
+import Foundation
 
 // array of commands
 let commands: [Command] = [Alive(), Checkusers(), Say(), Help(), Commands(), Checkuser(), Delete(), Quota(), Kill(), MyPrivileges(), Reboot(), Threads()]

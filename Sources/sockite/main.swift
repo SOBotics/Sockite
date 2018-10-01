@@ -1,7 +1,6 @@
 import Foundation
 import SwiftChatSE
 import SwiftRedunda
-import Yams
 
 if CommandLine.arguments.contains("--reboot") {
     Log.log("Rebooted from command", withColor: .lightMagenta)
@@ -11,7 +10,7 @@ if CommandLine.arguments.contains("--reboot") {
     Log.log("Welcome to Sockite! Now starting up!", withColor: .lightMagenta)
 }
 Log.logInfo("Decoding credentials...")
-let creds = try! YAMLDecoder().decode(Creds.self, from: String(contentsOf: URL(fileURLWithPath: "creds.yml"), encoding: .utf8))
+let creds = try! JSONDecoder().decode(Creds.self, from: Data(contentsOf: URL(fileURLWithPath: "creds.json")))
 
 Log.logInfo("Initializing globalvars...")
 dataDir = creds.data_dir

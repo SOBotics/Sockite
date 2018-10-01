@@ -1,4 +1,4 @@
-import Darwin
+import Foundation
 
 class Reboot: Command {
     init() {

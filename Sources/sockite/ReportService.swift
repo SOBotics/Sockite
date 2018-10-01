@@ -1,4 +1,5 @@
 import Dispatch
+import Foundation
 
 class ReportService {
     
